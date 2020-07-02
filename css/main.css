@@ -205,7 +205,6 @@ ul {
 }
 
 .dropdown-content {
-    display: none;
     position: absolute;
     background-color: {{ site.accent_color }};
     z-index: 1;
@@ -389,11 +388,16 @@ display: inline-block;
 }
 
 /* Leaflet */
-img.legend {
+.legend {
 	height: 24px;
 	padding: 0px;
 	vertical-align: middle;
-	display: inline-block;
+	position: relative;
+
+}
+
+.legend img {
+  height: 40px;
 }
 
 img.article-marker {

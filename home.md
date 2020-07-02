@@ -1,10 +1,7 @@
 ---
-layout: home
-title: "Flâneur: A Jekyll theme for maps and texts"
+layout: page
+title: "Commemorating African American History at NC State"
+menutitle: "Home"
+order: 1
 ---
-
-> "_Flâneur_ (pronounced [flɑnœʁ]), from the French noun _flâneur_, means "stroller", "lounger", "saunterer", or "loafer". _Flânerie_ is the act of strolling, with all of its accompanying associations." ([Wikipedia](https://en.wikipedia.org/wiki/Flâneur))
-
-[Flâneur](https://github.com/kirschbombe/flaneur) is a Jekyll map-based theme using the Leaflet JavaScript library for presenting maps and text together. To see a real-world use case, visit the [Los Angeles: The City and the Library](https://citystoriesucla.github.io/lyricalmap/) project.
-
-Flâneur was developed by Dawn Childress and ported to Jekyll by Dawn Childress & Niqui O'Neill. It is based on the original [Boulevardier](https://github.com/kirschbombe/boulevardier) framework developed by Dawn Childress & Nathan Day.
+Initially conceived as a human-guided walking tour about African-American history at NC State, and extended into a mobile tour available via this site. The Red, White &amp; Black (RWB) project is an innovative approach to engagement that fosters the use of library resources, enhances educational goals, and provides opportunities for innovative partnerships. It is a collaboration between the NCSU Libraries, the <a href="https://oied.ncsu.edu/aacc/">African American Cultural Center</a>, and the <a href="https://history.ncsu.edu/">Department of History</a> at NC State. RWB gives participants the chance to explore spaces on campus that have had significant impact on the lives of African-American students, faculty, alumni, and administrators.
