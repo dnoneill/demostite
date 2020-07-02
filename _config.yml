@@ -1,10 +1,10 @@
 
 
 # --SITE SETTINGS--
-title: "Flâneur: a Jekyll theme for maps and text"
+title: "Red White and Black"
 email: dchildress@library.ucla.edu
 description:
-baseurl: "/flaneur" # the subpath of your site, e.g. /blog/
+baseurl: "/demostite" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 github_repo: https://github.com/kirschbombe/flaneur
 copyright_statement: © 2017 Dawn Childress. CC BY-NC-SA 4.0.
@@ -14,12 +14,8 @@ markdown: kramdown
 encoding: utf-8
 
 # --STYLES--
-accent_color: rgba(18, 127, 157, 1)  # accent color can be any css accepted value
+accent_color: rgba(204 0 0, 1)  # accent color can be any css accepted value
 accent_font: Della Respira  # Gogle Fonts import link is in head.html. You can specify the accent font here and it will add it to the main.css
-
-# --SOCIAL--
-twitter_username: kirschbombe
-github_username:  kirschbombe
 
 # --MAP SETTINGS--
 mapsettings:

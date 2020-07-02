@@ -162,7 +162,7 @@ const mapview = Vue.component('mapview', {
       this.mapMarkers = [];
       var items = _.groupBy(mapView.postdata, function(b) { return b.category_name});
       for (var i=0; i<mapView.postdata.length; i++){
-        var post = mapView.postdata[i];
+        const post = mapView.postdata[i];
         var icon = post.leafleticon;
         var counter = post.counter >= icons.length ? 0 : post.counter;
         var iconurl = icon ? icon : baseurl + icons[counter];
@@ -179,17 +179,16 @@ const mapview = Vue.component('mapview', {
         }).bindPopup(`<strong>${post.title}</strong><br>${post.desc }`, {offset:new L.Point(0,-30)});
         marker.iconURL = `<span class="my-div-icon" style="position:relative">${mbox.options.html}</span>`;
         var vue = this;
-        if (post.hash == this.$route.path) {
-          this.buildMapView(post, marker)
-        }
         marker.on('click', function(){
-          router.push(post.hash)
           vue.buildMapView(post, this);
         });
         this.mapMarkers.push({'post': post, 'marker': marker, 'group': post.category_name})
       }
     },
     buildMapView: function(post, marker=false) {
+      if (this.$route.path != post.hash){
+        this.$router.push(post.hash);
+      }
       axios.get(post.url).then((response) => {
         this.sidebar = {'content': response.data, 'title': post.title, 'menutitle': post.menutitle,
           'marker': marker, 'date': post.date, 'author': post.author, 'header': post.header};
