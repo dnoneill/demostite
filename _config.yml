@@ -14,7 +14,7 @@ markdown: kramdown
 encoding: utf-8
 
 # --STYLES--
-accent_color: rgba(204 0 0, 1)  # accent color can be any css accepted value
+accent_color: rgb(204, 0, 1)  # accent color can be any css accepted value
 accent_font: Della Respira  # Gogle Fonts import link is in head.html. You can specify the accent font here and it will add it to the main.css
 
 # --MAP SETTINGS--
@@ -36,7 +36,6 @@ collections:
     output: true
     permalink: /article/:name
   article-index:
-    title: Article Index
     output: true
     permalink: /article-index/:name/
 

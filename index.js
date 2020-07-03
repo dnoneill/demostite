@@ -72,10 +72,12 @@ const mapview = Vue.component('mapview', {
   created() {    
   },
   mounted() {    
-    var haveTitles = pages.filter(element => element['title'] || element['menutitle'])
+    var haveTitles = pages.filter(element => element['order'])
     this.sitePages = _.sortBy(haveTitles,"order");
     this.createMap();
     this.buildPage();
+    this.map.setView(setView);
+    this.map.fitBounds(this.markers.getBounds());
   },
   methods: {
     updateHash: function(page){
@@ -84,11 +86,12 @@ const mapview = Vue.component('mapview', {
     },
     buildPage: function() {
       var path = this.$route.path == '/' ? '/home/' : this.$route.path;
-      var matchingpage = this.sitePages.filter(element => element['hash'] == path);
+      path = path.replace(/^\/+|\/+$/g, '');
+      var matchingpage = pages.filter(element => element['hash'].replace(/^\/+|\/+$/g, '') == path);
       if (matchingpage.length > 0){
         this.buildMapView(matchingpage[0])
       } else {
-        var posts = this.mapMarkers.filter(element => element['post']['hash'] == path)[0];
+        var posts = this.mapMarkers.filter(element => element['post']['hash'].replace(/^\/+|\/+$/g, '') == path)[0];
         this.buildMapView(posts['post'], posts['marker'])
       }
     },

@@ -35,10 +35,11 @@
       pages.push({'title': '{{ page.title}}', 'desc': '{{page.desc}}','order': '{{page.order}}', 'url': '{{site.url}}{{site.baseurl}}{{page.url}}', 'hash':'{{page.url}}', 'author': '{{page.author}}', 'date': '{{page.date}}', 'menutitle': '{{page.menutitle}}'})
     {% endfor %}
     {% for collection in collections %}
-    {% for page in site.collections[collection.label] %}
+    {% for page in site[collection.label] %}
       pages.push({'title': '{{ page.title}}', 'desc': '{{page.desc}}','order': '{{page.order}}', 'url': '{{site.url}}{{site.baseurl}}{{page.url}}', 'hash':'{{page.url}}', 'author': '{{page.author}}', 'date': '{{page.date}}', 'menutitle': '{{page.menutitle}}'})
     {% endfor %}
     {% endfor %}
+    window.setView = {{site.mapsettings.setView}};
     window.pageData = pages;
     window.mapView.postdata = postdata;
     window.menuType = "{{site.menu-type}}";

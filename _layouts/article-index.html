@@ -9,7 +9,7 @@ layout: page
 {% endif %}
 
 {% for status in site.article-index %}
-    <a href="{{site.baseurl}}/#{{ status.url }}" class="index-button" onclick='onClick("{{status.url}}");'>{{ status.status }}</a>
+    <a href="{{site.baseurl}}/#{{ status.url }}" class="index-button">{{ status.status }}</a>
 {% endfor %}
 
 <!-- sort a-z -->
@@ -18,7 +18,7 @@ layout: page
      <h3>A-Z</h3>
      <ul>
        {% for post in azsort %}
-         <li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
+         <li><a href="{{site.baseurl}}/#{{post.url}}">{{post.title}}</a></li>
        {% endfor %}
       </ul>
   {% elsif status == 'category' %}
@@ -27,7 +27,7 @@ layout: page
        <h3>{{ category_name | capitalize }}</h3>
        <ul>
          {% for post in site.categories[category_name] %}
-          <li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
+          <li><a href="{{site.baseurl}}/#{{post.url}}">{{post.title}}</a></li>
          {% endfor %}
        </ul>
      {% endfor %}
@@ -53,7 +53,7 @@ layout: page
        <h3>{{ item.name | capitalize }}</h3>
        <ul>
          {% for post in item.items %}
-          <li><a href="{{site.baseurl}}/#{{post.url}}" onclick='onClick("{{post.url}}");'>{{post.title}}</a></li>
+          <li><a href="{{site.baseurl}}/#{{post.url}}">{{post.title}}</a></li>
          {% endfor %}
        </ul>
      {% endfor %}
