@@ -3,7 +3,7 @@ const mapview = Vue.component('mapview', {
   <div>
   <div class="sidebar">
       <div id="sidebar-content">
-      <button onclick="locate()">Where Am I?</button>
+      <button v-on:click="locate()">Where Am I?</button>
       <header>
         <p class="post-header" v-if="sidebar.header">{{sidebar.header}}</p>
         <p class="post-header" v-else>{{siteTitle}}</p>
@@ -54,7 +54,8 @@ const mapview = Vue.component('mapview', {
       sitePages: pages,
       menuType: menuType,
       menuShown: false,
-      siteTitle: siteTitle
+      siteTitle: siteTitle,
+      current: {'position': '', 'accuracy': ''}
   	}
   },
   props: {
@@ -78,11 +79,32 @@ const mapview = Vue.component('mapview', {
     this.buildPage();
     this.map.setView(setView);
     this.map.fitBounds(this.markers.getBounds());
+    this.map.on('locationfound', this.onLocationFound);
+    this.map.on('locationerror', this.onLocationError);
   },
   methods: {
     updateHash: function(page){
       this.$router.push(page.hash);
       this.menuShown = !this.menuShown;
+    },
+    locate: function(){
+      this.map.locate({setView: true, maxZoom: 16});
+    },
+    onLocationFound: function(e) {
+      if (this.current.position) {
+        this.map.removeLayer(this.current.position);
+        this.map.removeLayer(this.current.accuracy);
+      }
+
+      var radius = e.accuracy / 2;
+
+      this.current.position = L.marker(e.latlng).addTo(this.map)
+      .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+      this.current.accuracy = L.circle(e.latlng, radius).addTo(this.map);
+    },
+    onLocationError: function(e) {
+      alert(e.message);
     },
     buildPage: function() {
       var path = this.$route.path == '/' ? '/home/' : this.$route.path;
