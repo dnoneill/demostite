@@ -400,10 +400,19 @@ display: inline-block;
   height: 40px;
 }
 
-.legend .ordernumber {
-  font-size: .5em;
-  left: 60%;
+.ordernumber {
+  font-weight: 900;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+}
+.referenceIcons .ordernumber {
+  font-size: 16px;
+  left: 40%;
   transform: translate(-50%, -50%);
+  color: black;
 }
 
 img.article-marker {

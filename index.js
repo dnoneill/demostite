@@ -202,7 +202,7 @@ const mapview = Vue.component('mapview', {
         var marker = L.marker([post.lat, post.lng], {
           icon: mbox,
         }).bindPopup(`<strong>${post.title}</strong><br>${post.desc }`, {offset:new L.Point(0,-30)});
-        marker.iconURL = `<span class="my-div-icon" style="position:relative">${mbox.options.html}</span>`;
+        marker.iconURL = `<span class="referenceIcons" style="position:relative">${mbox.options.html}</span>`;
         var vue = this;
         marker.on('click', function(){
           vue.buildMapView(post, this);
