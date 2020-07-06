@@ -3,11 +3,8 @@ const mapview = Vue.component('mapview', {
   <div>
   <div class="sidebar">
       <div id="sidebar-content">
-      <button v-on:click="locate()" class="locate">
-        <i class="fa fa-location-arrow"></i>
-      </button>
-      <header>
-        <p class="post-header" v-if="sidebar.header">{{sidebar.header}}</p>
+      <header class="defaultheader">
+        <p class="post-header" v-if="sidebar.headertitle">{{sidebar.headertitle}}</p>
         <p class="post-header" v-else>{{siteTitle}}</p>
         <router-link v-if="sidebar.prev" class="prev" :to="sidebar.prev.hash">
           <i class="fa fa-chevron-circle-left"></i> {{sidebar.prev.title}}
@@ -42,7 +39,7 @@ const mapview = Vue.component('mapview', {
       <a v-on:click="menuShown = !menuShown">
         <i v-if="menuShown" class="fa fa-times close-btn"></i>
       </a>
-      <a v-for="page in sitePages" v-on:click="updateHash(page)" class="menu-link">
+      <a v-for="page in menuItems" v-on:click="updateHash(page)" class="menu-link">
         <span v-if="page.menutitle" v-html="page.menutitle"></span>
         <span v-else v-html="page.title"></span>
       </a>
@@ -64,7 +61,8 @@ const mapview = Vue.component('mapview', {
       mapMarkers: [],
       layerControl: '',
       sidebar: '',
-      sitePages: pages,
+      sitePages: [],
+      menuItems: [],
       postData: [],
       menuType: menuType,
       menuShown: false,
@@ -91,9 +89,9 @@ const mapview = Vue.component('mapview', {
   created() {    
   },
   mounted() {    
-    var haveTitles = pages.filter(element => element['order'])
-    this.sitePages = _.sortBy(haveTitles,"order");
     this.cleanPostData();
+    var hasTitles = this.sitePages.filter(element => element['order'])
+    this.menuItems = _.sortBy(hasTitles,"order");
     this.createMap();
     this.buildPage();
     this.map.setView(setView);
@@ -105,14 +103,16 @@ const mapview = Vue.component('mapview', {
     cleanPostData: function() {
       for (var it=0; it<mapView.postdata.length; it++){
         const post = mapView.postdata[it];
-        if (post.categories.length > 0){
+        if (post.categories && post.categories.length > 0){
           for (var ca=0; ca<post.categories.length; ca++){ 
             const copy = JSON.parse(JSON.stringify(post));
             copy['categories'] = post.categories[ca]; 
             this.postData.push(copy);
           }
-        } else {
+        } else if (post.lat && post.lng) {
           this.postData.push(JSON.parse(JSON.stringify(post)));
+        } else {
+          this.sitePages.push(JSON.parse(JSON.stringify(post)))
         }
       }
     },
@@ -142,13 +142,17 @@ const mapview = Vue.component('mapview', {
     buildPage: function() {
       var path = this.$route.path == '/' ? '/home/' : this.$route.path;
       path = path.replace(/^\/+|\/+$/g, '');
-      var matchingpage = pages.filter(element => element['hash'].replace(/^\/+|\/+$/g, '') == path);
+      var matchingpage = this.sitePages.filter(element => element['hash'].replace(/^\/+|\/+$/g, '') == path);
       if (matchingpage.length > 0){
         this.buildMapView(matchingpage[0])
       } else {
         var posts = this.mapMarkers.filter(element => element['post']['hash'].replace(/^\/+|\/+$/g, '') == path);
-        var markers = posts.map(post => post['marker'])
-        this.buildMapView(posts[0]['post'], markers)
+        if (posts.length > 0){
+          var markers = posts.map(post => post['marker'])
+          this.buildMapView(posts[0]['post'], markers)
+        } else {
+          this.buildMapView({'url': baseurl + this.$route.fullPath})
+        }
       }
     },
     createMap: function() {
@@ -258,8 +262,7 @@ const mapview = Vue.component('mapview', {
         const prev = post.prev ? post.prev[0] : post.prev;
         this.sidebar = {'content': response.data, 'title': post.title, 
           'menutitle': post.menutitle, 'markers': marker, 'date': post.date, 
-          'author': post.author, 'header': post.header, 'next': next, 'prev': prev
-        };
+          'author': post.author, 'header': post.headertitle, 'next': next, 'prev': prev };
         document.getElementsByClassName('sidebar')[0].scrollTop = 0;
       });
     },

@@ -2,37 +2,29 @@
 <html>
 
   {% include head.html %}
-  
   <script>
-      window.mapView = window.mapView || {};
-      window.mapView.mapData = {{site.mapsettings | jsonify}};
-      var icons = []
-      {% for image in site.static_files %}
-
-    {% if image.path contains 'assets/leaflet/img' %}
-        icons.push('{{ image.path }}');
-    {% endif %}
+    window.mapView = window.mapView || {};
+    window.mapView.mapData = {{site.mapsettings | jsonify}};
+    var icons = []
+    {% for image in site.static_files %}
+      {% if image.path contains 'assets/leaflet/img' %}
+          icons.push('{{ image.path }}');
+      {% endif %}
     {% endfor %}
     window.mapView.icons = icons;
     window.baseurl = '{{site.baseurl}}';
     var postdata = []
     var counter = -1;
     counter += 1;
-    {% for post in site.posts %}
-      postdata.push({'lat': '{{ post.lat }}', 'lng': '{{ post.lng }}', 'title': '{{ post.title}}', 'desc': '{{post.desc}}', 'leafleticon': '{{post.leafleticon}}', 'order': '{{post.order}}', 'url': '{{site.url}}{{site.baseurl}}{{post.url}}', 'categories': {{post.categories | jsonify}}, 'hash': '{{post.url}}', 'author': '{{post.author}}', 'date': '{{post.date | date_to_string}}'})
-    {% endfor %}
-    var pages = []
-    {% assign collections = site.collections | where_exp: 'item', 'item.label != "posts"'  %}
-    {% for page in site.pages %}
-      pages.push({'title': '{{ page.title}}', 'desc': '{{page.desc}}','order': '{{page.order}}', 'url': '{{site.url}}{{site.baseurl}}{{page.url}}', 'hash':'{{page.url}}', 'author': '{{page.author}}', 'date': '{{page.date | date_to_string}}', 'menutitle': '{{page.menutitle}}'})
-    {% endfor %}
+    {% assign collections = site.collections | where_exp: 'item', 'item.label != "posts"' | map: "docs" %}
+    {% assign everything = site.posts | concat: site.pages %}
     {% for collection in collections %}
-    {% for page in site[collection.label] %}
-      pages.push({'title': '{{ page.title}}', 'desc': '{{page.desc}}','order': '{{page.order}}', 'url': '{{site.url}}{{site.baseurl}}{{page.url}}', 'hash':'{{page.url}}', 'author': '{{page.author}}', 'date': '{{page.date | date_to_string}}', 'menutitle': '{{page.menutitle}}'})
+      {% assign everything = everything | concat: collection %}
     {% endfor %}
+    {% for post in everything %}
+      postdata.push({'lat': '{{ post.lat }}', 'lng': '{{ post.lng }}', 'title': '{{ post.title}}', 'desc': '{{post.desc}}', 'leafleticon': '{{post.leafleticon}}', 'order': '{{post.order}}', 'url': '{{site.url}}{{site.baseurl}}{{post.url}}', 'categories': {{post.categories | jsonify}}, 'hash': '{{post.url}}', 'author': '{{post.author}}', 'date': '{{post.date | date_to_string}}', 'headertitle': '{{post.headertitle}}', 'menutitle': '{{post.menutitle}}'})
     {% endfor %}
     window.setView = {{site.mapsettings.setView}};
-    window.pageData = pages;
     window.mapView.postdata = postdata;
     window.menuType = "{{site.menu-type}}";
     window.siteTitle = "{{site.title}}"

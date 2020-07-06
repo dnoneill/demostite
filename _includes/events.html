@@ -10,7 +10,7 @@
  </iframe>
  {% assign events = page.events | sort: "year" %}
 {% for event in events %}
-  <div id="main-content" class="medium-12 main columns">
+  <div id="{{event.year}}" class="medium-12 main columns">
     <h1>{{event.year}} - {{ event.title }}</h1>
     {% if event.audio_id != null %}
     <hr>
