@@ -8,7 +8,8 @@
   src="https://maps.google.com/maps?q={{page.lat}},{{page.lng}}&z=14&amp;output=embed"
  >
  </iframe>
-{% for event in page.events %}
+ {% assign events = page.events | sort: "year" %}
+{% for event in events %}
   <div id="main-content" class="medium-12 main columns">
     <h1>{{event.year}} - {{ event.title }}</h1>
     {% if event.audio_id != null %}
@@ -27,13 +28,13 @@
       <p class="image">
         <img src="https://iiif.lib.ncsu.edu/iiif/{{event.image_id}}/full/!400,425/0/default.jpg">
       </p>
-      <figcaption class="caption">{{event.image_caption}}</figcaption>
+      <figcaption class="caption">{{event.excerpt}}</figcaption>
       {% endif %}
 
       {% if event.iiif_crop != null %}
       <p class="image">
         <img src="{{event.iiif_crop}}">
-        <figcaption class="caption">{{event.image_caption}}</figcaption>
+        <figcaption class="caption">{{event.excerpt}}</figcaption>
       </p>
       {% endif %}
     <p>  {{ event.description }}</p>

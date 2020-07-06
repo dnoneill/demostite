@@ -49,6 +49,7 @@ layout: page
 	       {% endfor %}
 {% else %}
     {% assign sorted = site.posts | group_by: status | sort:"name" %}
+    {{sorted | inspect}}
     {% for item in sorted %}
        <h3>{{ item.name | capitalize }}</h3>
        <ul>
