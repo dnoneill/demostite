@@ -264,6 +264,9 @@ const mapview = Vue.component('mapview', {
           'menutitle': post.menutitle, 'markers': marker, 'date': post.date, 
           'author': post.author, 'header': post.headertitle, 'next': next, 'prev': prev };
         document.getElementsByClassName('sidebar')[0].scrollTop = 0;
+        if (marker && marker.length > 0) {
+          this.goToMarker(marker[0])
+        }
       });
     },
     goToMarker: function(marker) {
