@@ -479,3 +479,7 @@ padding-top: 6em;
   background-image: url('{{site.baseurl}}/assets/leaflet/images/icon.png');
   background-size: 20px 30px;
 }
+
+.next {
+  float: right;
+}

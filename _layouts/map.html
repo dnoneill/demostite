@@ -19,16 +19,16 @@
     var counter = -1;
     counter += 1;
     {% for post in site.posts %}
-      postdata.push({'lat': '{{ post.lat }}', 'lng': '{{ post.lng }}', 'title': '{{ post.title}}', 'desc': '{{post.desc}}', 'leafleticon': '{{post.leafleticon}}', 'order': '{{post.order}}', 'url': '{{site.url}}{{site.baseurl}}{{post.url}}', 'categories': {{post.categories | jsonify}}, 'hash': '{{post.url}}', 'author': '{{post.author}}', 'date': '{{post.date}}'})
+      postdata.push({'lat': '{{ post.lat }}', 'lng': '{{ post.lng }}', 'title': '{{ post.title}}', 'desc': '{{post.desc}}', 'leafleticon': '{{post.leafleticon}}', 'order': '{{post.order}}', 'url': '{{site.url}}{{site.baseurl}}{{post.url}}', 'categories': {{post.categories | jsonify}}, 'hash': '{{post.url}}', 'author': '{{post.author}}', 'date': '{{post.date | date_to_string}}'})
     {% endfor %}
     var pages = []
     {% assign collections = site.collections | where_exp: 'item', 'item.label != "posts"'  %}
     {% for page in site.pages %}
-      pages.push({'title': '{{ page.title}}', 'desc': '{{page.desc}}','order': '{{page.order}}', 'url': '{{site.url}}{{site.baseurl}}{{page.url}}', 'hash':'{{page.url}}', 'author': '{{page.author}}', 'date': '{{page.date}}', 'menutitle': '{{page.menutitle}}'})
+      pages.push({'title': '{{ page.title}}', 'desc': '{{page.desc}}','order': '{{page.order}}', 'url': '{{site.url}}{{site.baseurl}}{{page.url}}', 'hash':'{{page.url}}', 'author': '{{page.author}}', 'date': '{{page.date | date_to_string}}', 'menutitle': '{{page.menutitle}}'})
     {% endfor %}
     {% for collection in collections %}
     {% for page in site[collection.label] %}
-      pages.push({'title': '{{ page.title}}', 'desc': '{{page.desc}}','order': '{{page.order}}', 'url': '{{site.url}}{{site.baseurl}}{{page.url}}', 'hash':'{{page.url}}', 'author': '{{page.author}}', 'date': '{{page.date}}', 'menutitle': '{{page.menutitle}}'})
+      pages.push({'title': '{{ page.title}}', 'desc': '{{page.desc}}','order': '{{page.order}}', 'url': '{{site.url}}{{site.baseurl}}{{page.url}}', 'hash':'{{page.url}}', 'author': '{{page.author}}', 'date': '{{page.date | date_to_string}}', 'menutitle': '{{page.menutitle}}'})
     {% endfor %}
     {% endfor %}
     window.setView = {{site.mapsettings.setView}};
