@@ -1,13 +1,9 @@
 ---
 categories:
 - '1960'
-- '1967'
-- '2011'
-- '1973'
-- '2008'
-- '1962'
-- '1975'
-- '1968'
+- '1970'
+- '2000'
+- '2010'
 events:
 - audio_id: null
   building: Reynolds Coliseum

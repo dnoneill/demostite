@@ -1,8 +1,8 @@
 ---
 categories:
-- '1971'
-- '1992'
+- '1970'
 - '1980'
+- '1990'
 events:
 - audio_id: null
   building: Greek Letters

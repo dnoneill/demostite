@@ -1,6 +1,6 @@
 ---
 categories:
-- '1988'
+- '1980'
 events:
 - audio_id: null
   building: Tompkins Hall

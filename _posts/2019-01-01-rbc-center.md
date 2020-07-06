@@ -1,6 +1,6 @@
 ---
 categories:
-- '2006'
+- '2000'
 events:
 - audio_id: sa-rwb-033
   building: RBC Center

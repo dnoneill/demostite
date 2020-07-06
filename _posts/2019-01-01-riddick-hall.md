@@ -1,7 +1,6 @@
 ---
 categories:
-- '1956'
-- '1957'
+- '1950'
 events:
 - audio_id: sa-rwb-001
   building: Riddick Hall

@@ -22,8 +22,8 @@ const mapview = Vue.component('mapview', {
   </div>
   <div id="map"></div>
   <div v-bind:class="menuType">
-  <button v-bind:class="menuType" class="menu-button" v-on:click="menuShown = !menuShown;">
-        <i v-if="!menuShown"class="fa fa-bars"></i>
+    <button v-bind:class="menuType" v-if="!menuShown" class="menu-button" v-on:click="menuShown = !menuShown;">
+        <i class="fa fa-bars"></i>
       </button>
     <div v-bind:class="menuType + '-content'" class="sub-menu" >
       <span v-if="menuShown">
@@ -70,6 +70,10 @@ const mapview = Vue.component('mapview', {
     },
     "$route.path": function(){
       this.buildPage();
+    },
+    sidebar: async function(){
+      await this.$nextTick();
+      this.lightBox();
     }
   },
   created() {    
@@ -206,8 +210,8 @@ const mapview = Vue.component('mapview', {
       for (var i=0; i<this.postData.length; i++){
         const post = this.postData[i];
         var icon = post.leafleticon;
-        var counter = post.counter >= icons.length ? 0 : post.counter;
-        var iconurl = icon ? icon : baseurl + icons[counter];
+        var counter = i >= icons.length ? 0 : i;
+        var iconurl = icon ? icon : baseurl + icons[i];
         var order = post.order
         var mbox = new L.DivIcon({
           html: `<img class="my-div-image" src="${iconurl}"/>
@@ -234,7 +238,6 @@ const mapview = Vue.component('mapview', {
       axios.get(post.url).then((response) => {
         this.sidebar = {'content': response.data, 'title': post.title, 'menutitle': post.menutitle,
           'marker': marker, 'date': post.date, 'author': post.author, 'header': post.header};
-        this.lightBox();
         document.getElementsByClassName('sidebar')[0].scrollTop = 0;
       });
     },

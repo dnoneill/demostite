@@ -1,7 +1,7 @@
 ---
 categories:
-- '1971'
 - '1960'
+- '1970'
 events:
 - audio_id: null
   building: Gardner Hall

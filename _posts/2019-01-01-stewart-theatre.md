@@ -1,7 +1,6 @@
 ---
 categories:
-- '2006'
-- '2003'
+- '2000'
 events:
 - audio_id: null
   building: Stewart Theatre

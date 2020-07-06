@@ -1,9 +1,7 @@
 ---
 categories:
+- '1880'
 - '2000'
-- '2006'
-- '2002'
-- '1889'
 events:
 - audio_id: null
   building: Winslow Hall

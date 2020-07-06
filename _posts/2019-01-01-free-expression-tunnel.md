@@ -1,7 +1,6 @@
 ---
 categories:
-- '2011'
-- '2008'
+- '2000'
 - '2010'
 events:
 - audio_id: null

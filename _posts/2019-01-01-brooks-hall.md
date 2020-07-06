@@ -1,7 +1,6 @@
 ---
 categories:
-- '1971'
-- '1975'
+- '1970'
 events:
 - audio_id: null
   building: Brooks Hall

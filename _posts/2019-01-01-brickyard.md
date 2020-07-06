@@ -1,6 +1,6 @@
 ---
 categories:
-- '1969'
+- '1960'
 events:
 - audio_id: sa-rwb-008
   building: Brickyard

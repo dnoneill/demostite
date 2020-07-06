@@ -19,7 +19,7 @@
     var counter = -1;
     counter += 1;
     {% for post in site.posts %}
-      postdata.push({'lat': '{{ post.lat }}', 'lng': '{{ post.lng }}', 'title': '{{ post.title}}', 'desc': '{{post.desc}}', 'leafleticon': '{{post.leafleticon}}', 'order': '{{post.order}}', 'url': '{{site.url}}{{site.baseurl}}{{post.url}}', 'categories': {{post.categories | jsonify}}, 'counter': counter, 'hash': '{{post.url}}', 'author': '{{post.author}}', 'date': '{{post.date}}'})
+      postdata.push({'lat': '{{ post.lat }}', 'lng': '{{ post.lng }}', 'title': '{{ post.title}}', 'desc': '{{post.desc}}', 'leafleticon': '{{post.leafleticon}}', 'order': '{{post.order}}', 'url': '{{site.url}}{{site.baseurl}}{{post.url}}', 'categories': {{post.categories | jsonify}}, 'hash': '{{post.url}}', 'author': '{{post.author}}', 'date': '{{post.date}}'})
     {% endfor %}
     var pages = []
     {% assign collections = site.collections | where_exp: 'item', 'item.label != "posts"'  %}

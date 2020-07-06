@@ -1,6 +1,6 @@
 ---
 categories:
-- '1978'
+- '1970'
 events:
 - audio_id: null
   building: McKimmon Center

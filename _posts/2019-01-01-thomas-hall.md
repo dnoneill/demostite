@@ -1,6 +1,6 @@
 ---
 categories:
-- '1974'
+- '1970'
 events:
 - audio_id: null
   building: Thomas Hall

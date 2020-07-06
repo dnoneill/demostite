@@ -1,7 +1,7 @@
 ---
 categories:
-- '2013'
-- '1962'
+- '1960'
+- '2010'
 events:
 - audio_id: null
   building: Nelson Hall

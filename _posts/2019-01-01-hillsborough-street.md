@@ -1,7 +1,6 @@
 ---
 categories:
-- '1963'
-- '1966'
+- '1960'
 events:
 - audio_id: null
   building: Hillsborough Street

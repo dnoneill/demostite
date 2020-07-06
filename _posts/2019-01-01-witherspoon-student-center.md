@@ -1,16 +1,9 @@
 ---
 categories:
-- '1995'
-- '1989'
-- '1990'
-- '2004'
-- '1998'
-- '1982'
-- '1976'
-- '1992'
-- '1991'
-- '2005'
+- '1970'
 - '1980'
+- '1990'
+- '2000'
 events:
 - audio_id: null
   building: Witherspoon Student Center

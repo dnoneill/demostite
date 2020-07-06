@@ -1,6 +1,6 @@
 ---
 categories:
-- '1974'
+- '1970'
 events:
 - audio_id: sa-rwb-018
   building: West Dunn Building

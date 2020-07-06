@@ -1,6 +1,6 @@
 ---
 categories:
-- '1972'
+- '1950'
 - '1970'
 - '1990'
 events:
@@ -78,6 +78,24 @@ events:
   start_date: 01/01/1970
   title: First African-American Student Senate President
   year: '1970'
+- audio_id: sa-rwb-006
+  building: D.H. Hill Library
+  categories: d.h.-hill-library
+  description: Edward Walker was hired as a mail clerk, becoming the first full-time
+    African-American staff member of the library.
+  event_decade: '1950'
+  event_id: '89'
+  excerpt: Edward Walker was hired as a mail clerk, becoming the first full-time African-American
+    staff member of the library.
+  iiif_crop: null
+  image id (orig): '0003271'
+  image_caption: null
+  image_id: '0003271'
+  image_type: null
+  redirect_from: /events/9/index.html
+  start_date: 01/01/1953
+  title: First Full-Time African-American Library Staff Member
+  year: '1953'
 lat: '35.787601'
 layout: post
 lng: '-78.669998'

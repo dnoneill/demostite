@@ -1,11 +1,8 @@
 ---
 categories:
-- '1973'
-- '1978'
-- '1991'
+- '1960'
 - '1970'
-- '1968'
-- '1969'
+- '1990'
 events:
 - audio_id: null
   building: Carter-Finley Stadium

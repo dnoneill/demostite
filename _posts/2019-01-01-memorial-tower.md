@@ -1,7 +1,7 @@
 ---
 categories:
-- '1963'
-- '1987'
+- '1960'
+- '1980'
 events:
 - audio_id: sa-rwb-020
   building: Memorial Tower
