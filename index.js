@@ -245,7 +245,7 @@ const mapview = Vue.component('mapview', {
         marker.iconURL = `<span class="referenceIcons" style="position:relative">${mbox.options.html}</span>`;
         var vue = this;
         marker.on('click', function(){
-          vue.buildMapView(post, this);
+          vue.buildMapView(post, [this]);
         });
         post['next'] = orderlist[order+1];
         post['prev'] = orderlist[order-1];
