@@ -48,6 +48,3 @@ menu-type: dropdown  # options: dropdown, circle
 menu-height: '200px'
 menu-width: '200px'
 menu-opacity: '.95'
-
-#pages to exclude in menu
-exclude_pages: [ "index.html", 'home.md']

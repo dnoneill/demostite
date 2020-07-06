@@ -2,12 +2,7 @@
 <html>
 
   {% include head.html %}
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js" integrity="sha512-3oappXMVVac3Ge3OndW0WqpGTWx9jjRJA8SXin8RxmPfc8rg87b31FGy14WHG/ZMRISo9pBjezW9y00RYAEONA==" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
+  
   <script>
       window.mapView = window.mapView || {};
       window.mapView.mapData = {{site.mapsettings | jsonify}};
@@ -22,12 +17,9 @@
     window.baseurl = '{{site.baseurl}}';
     var postdata = []
     var counter = -1;
-    {% for category in site.categories %}
     counter += 1;
-    {% capture category_name %}{{ category | first }}{% endcapture %}
-    {% for post in site.categories[category_name] %}
-      postdata.push({'lat': '{{ post.lat }}', 'lng': '{{ post.lng }}', 'title': '{{ post.title}}', 'desc': '{{post.desc}}', 'leafleticon': '{{post.leafleticon}}', 'order': '{{post.order}}', 'url': '{{site.url}}{{site.baseurl}}{{post.url}}', 'category_name': '{{category_name}}', 'counter': counter, 'hash': '{{post.url}}', 'author': '{{post.author}}', 'date': '{{post.date}}'})
-    {% endfor %}
+    {% for post in site.posts %}
+      postdata.push({'lat': '{{ post.lat }}', 'lng': '{{ post.lng }}', 'title': '{{ post.title}}', 'desc': '{{post.desc}}', 'leafleticon': '{{post.leafleticon}}', 'order': '{{post.order}}', 'url': '{{site.url}}{{site.baseurl}}{{post.url}}', 'categories': {{post.categories | jsonify}}, 'counter': counter, 'hash': '{{post.url}}', 'author': '{{post.author}}', 'date': '{{post.date}}'})
     {% endfor %}
     var pages = []
     {% assign collections = site.collections | where_exp: 'item', 'item.label != "posts"'  %}

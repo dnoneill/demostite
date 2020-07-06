@@ -24,11 +24,12 @@ const mapview = Vue.component('mapview', {
   <div v-bind:class="menuType">
   <button v-bind:class="menuType" class="menu-button" v-on:click="menuShown = !menuShown;">
         <i v-if="!menuShown"class="fa fa-bars"></i>
-        <i v-else class="fa fa-times close-btn"></i>
       </button>
     <div v-bind:class="menuType + '-content'" class="sub-menu" >
-      
       <span v-if="menuShown">
+      <a v-on:click="menuShown = !menuShown">
+        <i v-if="menuShown" class="fa fa-times close-btn"></i>
+      </a>
       <a v-for="page in sitePages" v-on:click="updateHash(page)" class="menu-link">
         <span v-if="page.menutitle" v-html="page.menutitle"></span>
         <span v-else v-html="page.title"></span>
@@ -52,6 +53,7 @@ const mapview = Vue.component('mapview', {
       layerControl: '',
       sidebar: '',
       sitePages: pages,
+      postData: [],
       menuType: menuType,
       menuShown: false,
       siteTitle: siteTitle,
@@ -75,6 +77,7 @@ const mapview = Vue.component('mapview', {
   mounted() {    
     var haveTitles = pages.filter(element => element['order'])
     this.sitePages = _.sortBy(haveTitles,"order");
+    this.cleanPostData();
     this.createMap();
     this.buildPage();
     this.map.setView(setView);
@@ -83,6 +86,20 @@ const mapview = Vue.component('mapview', {
     this.map.on('locationerror', this.onLocationError);
   },
   methods: {
+    cleanPostData: function() {
+      for (var it=0; it<mapView.postdata.length; it++){
+        const post = mapView.postdata[it];
+        const copy = JSON.parse(JSON.stringify(post));
+        if (post.categories.length > 0){
+          for (var ca=0; ca<post.categories.length; ca++){ 
+            copy['categories'] = post.categories[ca]; 
+            this.postData.push(copy);
+          }
+        } else {
+          this.postData.push(copy);
+        }
+      }
+    },
     updateHash: function(page){
       this.$router.push(page.hash);
       this.menuShown = !this.menuShown;
@@ -185,9 +202,9 @@ const mapview = Vue.component('mapview', {
     },
     createMarkers: function() {
       this.mapMarkers = [];
-      var items = _.groupBy(mapView.postdata, function(b) { return b.category_name});
-      for (var i=0; i<mapView.postdata.length; i++){
-        const post = mapView.postdata[i];
+      var items = _.groupBy(this.postData, function(b) { return b.categories});
+      for (var i=0; i<this.postData.length; i++){
+        const post = this.postData[i];
         var icon = post.leafleticon;
         var counter = post.counter >= icons.length ? 0 : post.counter;
         var iconurl = icon ? icon : baseurl + icons[counter];
@@ -207,7 +224,7 @@ const mapview = Vue.component('mapview', {
         marker.on('click', function(){
           vue.buildMapView(post, this);
         });
-        this.mapMarkers.push({'post': post, 'marker': marker, 'group': post.category_name})
+        this.mapMarkers.push({'post': post, 'marker': marker, 'group': post.categories})
       }
     },
     buildMapView: function(post, marker=false) {
@@ -217,7 +234,8 @@ const mapview = Vue.component('mapview', {
       axios.get(post.url).then((response) => {
         this.sidebar = {'content': response.data, 'title': post.title, 'menutitle': post.menutitle,
           'marker': marker, 'date': post.date, 'author': post.author, 'header': post.header};
-          this.lightBox();
+        this.lightBox();
+        document.getElementsByClassName('sidebar')[0].scrollTop = 0;
       });
     },
     goToMarker: function(marker) {
