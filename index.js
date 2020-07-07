@@ -94,8 +94,6 @@ const mapview = Vue.component('mapview', {
     this.menuItems = _.sortBy(hasTitles,"order");
     this.createMap();
     this.buildPage();
-    this.map.setView(setView);
-    this.map.fitBounds(this.markers.getBounds());
     this.map.on('locationfound', this.onLocationFound);
     this.map.on('locationerror', this.onLocationError);
   },
@@ -167,6 +165,8 @@ const mapview = Vue.component('mapview', {
       }).addTo(this.map);
       this.createMarkers();
       this.addMarkers();
+      this.map.setView(setView);
+      this.map.fitBounds(this.markers.getBounds());
     },
     lightBox: function() {
       var images = document.getElementsByClassName("image");
@@ -197,7 +197,7 @@ const mapview = Vue.component('mapview', {
       this.markers = this.getMarkers();        
       for (var key in groupedMarkers){
         var markers = groupedMarkers[key].map(element => element['marker']);
-        var image = markers[0].iconURL;
+        var image = markers[0].legendIcon;
         if (this.markergrouping == 'grouped') {
           var group = L.featureGroup.subGroup(this.markers, markers);
           this.map.addLayer(this.markers);
@@ -243,6 +243,7 @@ const mapview = Vue.component('mapview', {
           icon: mbox,
         }).bindPopup(`<strong>${post.title}</strong><br>${post.desc }`, {offset:new L.Point(0,-30)});
         marker.iconURL = `<span class="referenceIcons" style="position:relative">${mbox.options.html}</span>`;
+        marker.legendIcon = `<img class="my-div-image" src="${iconurl}"/>`
         var vue = this;
         marker.on('click', function(){
           vue.buildMapView(post, [this]);
@@ -275,6 +276,9 @@ const mapview = Vue.component('mapview', {
           marker.openPopup();
         });
       } catch(err) {
+        var latLngs = [ marker.getLatLng() ];
+        var markerBounds = L.latLngBounds(latLngs);
+        this.map.fitBounds(markerBounds);
         marker.openPopup();
       }
     },
