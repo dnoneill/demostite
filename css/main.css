@@ -483,3 +483,7 @@ padding-top: 6em;
 .next {
   float: right;
 }
+
+.date {
+  display: none;
+}
