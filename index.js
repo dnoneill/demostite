@@ -231,7 +231,7 @@ const mapview = Vue.component('mapview', {
         const iconindex = categories.indexOf(post.categories);
         var counter = iconindex >= icons.length ? 0 : iconindex;
         var iconurl = icon ? icon : baseurl + icons[iconindex];
-        var order = parseInt(post.order)
+        var order = post.order ? parseInt(post.order) : '';
         var mbox = new L.DivIcon({
           html: `<img class="my-div-image" src="${iconurl}"/>
                 <span class="ordernumber">${order}</span>`,

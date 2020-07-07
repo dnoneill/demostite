@@ -22,7 +22,7 @@
       {% assign everything = everything | concat: collection %}
     {% endfor %}
     {% for post in everything %}
-      postdata.push({'lat': '{{ post.lat }}', 'lng': '{{ post.lng }}', 'title': '{{ post.title}}', 'desc': '{{post.desc}}', 'leafleticon': '{{post.leafleticon}}', 'order': '{{post.order}}', 'url': '{{site.url}}{{site.baseurl}}{{post.url}}', 'categories': {{post.categories | jsonify}}, 'hash': '{{post.url}}', 'author': '{{post.author}}', 'date': '{{post.date | date_to_string}}', 'headertitle': '{{post.headertitle}}', 'menutitle': '{{post.menutitle}}'})
+      postdata.push({'lat': {{ post.lat | jsonify}}, 'lng': {{ post.lng | jsonify }}, 'title': {{ post.title | jsonify}}, 'desc': {{post.desc | jsonify}}, 'leafleticon': {{post.leafleticon | jsonify}}, 'order': {{post.order | jsonify}}, 'url': '{{site.url}}{{site.baseurl}}{{post.url}}', 'categories': {{post.categories | jsonify}}, 'hash': {{post.url | jsonify}}, 'author': {{post.author | jsonify}}, 'date': '{{post.date | date_to_string}}', 'headertitle': {{post.headertitle | jsonify}}, 'menutitle': {{post.menutitle | jsonify}} })
     {% endfor %}
     window.setView = {{site.mapsettings.setView}};
     window.mapView.postdata = postdata;
@@ -31,7 +31,6 @@
     </script>
 
   <div id="app">
-
     <mapview></mapview>
   </div>
   <script src="index.js"></script>
