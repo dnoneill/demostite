@@ -383,7 +383,7 @@ const mapview = Vue.component('mapview', {
     createMarkers: function() {
       this.mapMarkers = [];
       let orderlist = _.groupBy(this.postData, function(b) { return b.order});
-      let categories = this.postData.map(pd => pd.categories);
+      let categories = [...new Set(this.postData.map(pd => pd.categories))];
       for (var i=0; i<this.postData.length; i++){
         const post = JSON.parse(JSON.stringify(this.postData[i], this.replaceNull));
         var icon = post.leafleticon;
