@@ -1,3 +1,71 @@
+const searchview = Vue.component('searchview', {
+  template: `
+  <div>
+  <input v-model="searchterm" v-on:change="searchIndex()"/>
+  <input type="submit" value="Submit" v-on:submit="searchIndex()">
+  <div v-if="results">
+    <ul v-for="result in results">
+      <li>
+        <router-link :to="result.hash">{{result.title}}
+        </router-link>
+      </li>
+    </ul>
+  </div>
+  <div v-else-if="!results">
+    No results found
+  </div>
+
+  </div>`,
+  data: function() {
+    return {
+      searchterm: '',
+      idx: '',
+      results: [],
+      searchitems: {}
+    }
+  },
+  created() {   
+    this.searchterm = this.$route.query['q'];
+    for (var si=0; si<searchItems.length; si++){
+      searchItems[si]['id'] = searchItems[si]['slug'];
+      this.searchitems[searchItems[si]['slug']] = searchItems[si];
+    }
+    //this.buildIndex();
+  },
+  mounted() {   
+    this.buildIndex();
+  },
+  methods: {
+    searchIndex: function() {
+      var results = this.idx.search(this.searchterm);
+      if (this.searchterm != this.$route.query['q']){
+        this.$router.push({query:{q: this.searchterm}});
+      }
+      if (results.length > 0){
+        this.results = results.map(element => this.searchitems[element['ref']]);
+      } else {
+        this.results = false;
+      }
+    },
+    buildIndex: function() {
+      this.idx = lunr(function() {
+        for (var fi=0; fi<searchFields.length; fi++){
+          const field = searchFields[fi];
+          this.field(field['field'], {'boost': field['boost']});
+        }
+      })
+      for (var si=0; si<searchItems.length; si++){
+        if (searchItems[si]['id']){
+          this.idx.add(searchItems[si]);
+        }
+      }
+      if (this.searchterm) {
+        this.searchIndex();
+      }
+    }
+  }
+});
+
 const mapview = Vue.component('mapview', {
   template: `
   <div>
@@ -35,6 +103,8 @@ const mapview = Vue.component('mapview', {
         </h1>
       </header>
       <span v-html="sidebar.content"></span>
+      <div id="scriptholder"></div>
+      <searchview v-if="searchview"></searchview>
       </div>
   </div>
   <div id="map"></div>
@@ -78,11 +148,15 @@ const mapview = Vue.component('mapview', {
       current: {'position': '', 'accuracy': ''},
       routeInfo: false,
       showRoute: false,
-      apiUrl: mapView.mapData.directionapi
+      apiUrl: mapView.mapData.directionapi,
+      searchview: false
   	}
   },
   props: {
     sitedata: Object
+  },
+  components: {
+    'searchview': searchview
   },
   watch: {
     markergrouping: function() {
@@ -220,12 +294,13 @@ const mapview = Vue.component('mapview', {
     },
     buildPage: function() {
       var path = this.$route.path == '/' ? '/home/' : this.$route.path;
-      path = path.replace(/^\/+|\/+$/g, '');
-      var matchingpage = this.sitePages.filter(element => element['hash'].replace(/^\/+|\/+$/g, '') == path);
+      path = this.cleanHash(path);
+      var matchingpage = this.sitePages.filter(element => this.cleanHash(element['hash']) == path);
       if (matchingpage.length > 0){
+        this.searchview = matchingpage[0].type == 'search' ? true : false;
         this.buildMapView(matchingpage[0])
       } else {
-        var posts = this.mapMarkers.filter(element => element['post']['hash'].replace(/^\/+|\/+$/g, '') == path);
+        var posts = this.mapMarkers.filter(element => this.cleanHash(element['post']['hash']) == path);
         if (posts.length > 0){
           var markers = posts.map(post => post['marker'])
           this.buildMapView(posts[0]['post'], markers)
@@ -233,6 +308,9 @@ const mapview = Vue.component('mapview', {
           this.buildMapView({'url': baseurl + this.$route.fullPath})
         }
       }
+    },
+    cleanHash: function(hash) {
+      return hash.replace(/^\/+|\/+$/g, '');
     },
     createMap: function() {
       this.map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
@@ -358,9 +436,13 @@ const mapview = Vue.component('mapview', {
         var unescapedHTML = document.createElement('div')
         unescapedHTML.innerHTML = unescape(post.html);
         sidebar['content']= unescapedHTML.textContent;
+        this.javaScriptInserts(unescapedHTML);
         this.sidebar = sidebar;
       } else {
         axios.get(post.url).then((response) => {
+          var unescapedHTML = document.createElement('div')
+          unescapedHTML.innerHTML = response.data;
+          this.javaScriptInserts(unescapedHTML);
           sidebar['content']= response.data;
           this.sidebar = sidebar;
         })
@@ -368,6 +450,18 @@ const mapview = Vue.component('mapview', {
       document.getElementsByClassName('sidebar')[0].scrollTop = 0;
       if (marker && marker.length > 0) {
         this.goToMarker(marker[0])
+      }
+    },
+    javaScriptInserts: function(returnedHTML) {
+      var scripts = returnedHTML.getElementsByTagName('script');
+      for (var sc=0; sc<scripts.length; sc++){
+        let scriptEl = document.createElement('script');
+        for (var at=0; at<scripts[sc].attributes.length; at++){
+          const attribute = scripts[sc].attributes[at];
+          scriptEl.setAttribute(attribute.name, attribute.value)
+        }
+        scriptEl.innerHTML = scripts[sc].innerHTML;
+        document.getElementById('scriptholder').appendChild(scriptEl);
       }
     },
     goToMarker: function(marker) {
@@ -392,8 +486,9 @@ const mapview = Vue.component('mapview', {
   },
 })
 
+
 const routes = [
-  { path: '/', component: mapview },
+  { path: '**', component: mapview }
 ]
 
 const router = new VueRouter({

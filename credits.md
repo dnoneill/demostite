@@ -2,7 +2,7 @@
 layout: page
 title: Credits
 permalink: /credits/
-order: 3
+order: 5
 ---
 
 #### Jekyll theme
