@@ -17,12 +17,14 @@ const mapview = Vue.component('mapview', {
       <header class="defaultheader">
         <p class="post-header" v-if="sidebar.headertitle">{{sidebar.headertitle}}</p>
         <p class="post-header" v-else>{{siteTitle}}</p>
-        <router-link v-if="sidebar.prev" class="prev" :to="sidebar.prev.hash">
-          <i class="fa fa-chevron-circle-left"></i> {{sidebar.prev.title}}
-        </router-link>
-        <router-link v-if="sidebar.next" class="next" :to="sidebar.next.hash">
-          {{sidebar.next.title}} <i class="fa fa-chevron-circle-right"></i>
-        </router-link>
+        <div>
+          <router-link v-if="sidebar.prev" class="prev" :to="sidebar.prev.hash">
+            <i class="fa fa-chevron-circle-left"></i> {{sidebar.prev.title}}
+          </router-link>
+          <router-link v-if="sidebar.next" class="next" :to="sidebar.next.hash">
+            {{sidebar.next.title}} <i class="fa fa-chevron-circle-right"></i>
+          </router-link>
+        </div>
         <h1 class="title" v-if="sidebar.title">{{sidebar.title}}
         <span v-if="sidebar.markers">
           <a v-for="marker in sidebar.markers"
@@ -94,6 +96,9 @@ const mapview = Vue.component('mapview', {
       this.lightBox();
     },
     mapMarkers: function() {
+      this.getDirections();
+    },
+    "sidebar.index": function() {
       this.getDirections();
     }
   },
@@ -343,7 +348,6 @@ const mapview = Vue.component('mapview', {
       if (this.$route.path != post.hash){
         this.$router.push(post.hash);
       }
-      this.getDirections();
       const next = post.next ? post.next[0] : post.next;
       const prev = post.prev ? post.prev[0] : post.prev;
       const sidebar = {'title': post.title, 
