@@ -25,6 +25,7 @@ mapsettings:
   maxZoom: 19
   setView: '[35.786499, -78.667297], 12'  # set map center point and zoom. See http://leafletjs.com/reference-1.2.0.html for more info.
   marker-grouping: grouped # sets the default clustering action. Options: grouped, single
+  directionapi: http://router.project-osrm.org/route/v1/walking/
 
 # Truncates map marker popup on small screens to only display post title
 window-height: 600

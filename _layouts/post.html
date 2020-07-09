@@ -2,6 +2,11 @@
 layout: default
 ---
 <div class="post">
+	<p class="byline">
+		{% if sidebar.author %}{{sidebar.author}}{% endif %}
+		{% if sidebar.date and sidebar.author %}, {% endif %}
+		{% if sidebar.date %}{{sidebar.date}}{% endif %}
+    </p>
     <div id="content">
       {{ page.content }}
       {% include events.html %}
