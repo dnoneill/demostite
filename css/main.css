@@ -231,7 +231,6 @@ ul {
 #choose {
 background-color: {{ site.accent_color }};
 color: white;
-padding: 15px;
 font-size: 16px;
 border: none;
 cursor: pointer;
@@ -252,6 +251,12 @@ display: inline-block;
         height: 40vh;
         width: 100vw;
     }
+
+    .leaflet-top {
+      height: 40vh;
+      overflow: auto;
+    }
+
     .sidebar {
         position: absolute;
         left: 0;
@@ -347,6 +352,12 @@ display: inline-block;
       height: 40vh;
       width: 100vw;
   }
+
+  .leaflet-top {
+    height: 40vh;
+    overflow: auto;
+  }
+
   .sidebar {
       height: 60vh;
       width: 100vw;
@@ -358,7 +369,7 @@ display: inline-block;
   }
 
   #choose {
-	bottom:60vh;
+	 bottom:60vh;
   }
 
   div.wrapper {
