@@ -74,12 +74,17 @@ const mapview = Vue.component('mapview', {
       <button v-if="sidebar.next" v-on:click="showRoute = !showRoute">
         <span v-if="showRoute">Hide</span><span v-else>Show</span> Directions to {{sidebar.next.title}}
       </button>
-      <button v-on:click="locate()" v-if="sidebar.markers && apiUrl">
+      <button v-on:click="getCurrentLocDirections()" v-if="sidebar.markers && apiUrl">
         Get directions from current location
+      </button>
+      <button v-on:click="locate()" v-if="sidebar.markers && apiUrl">
+        <i class="fa fa-location-arrow"></i>
       </button>
       <span v-if="routeInfo && showRoute">
         <div>~{{routeInfo.distance}} Miles, {{routeInfo.minutes}} minutes to {{sidebar.next.title}}</div>
-        <div v-html="routeInfo.directions"></div>
+        <a v-for="direction in routeInfo.directions" v-on:click="goToGeoJson(direction.geometry)">
+          <span v-html="direction.direction"></span>
+        </a>
       </span>
       <span v-else-if="showRoute">Directions are loading</span>
       <header class="defaultheader">
@@ -151,7 +156,8 @@ const mapview = Vue.component('mapview', {
       showRoute: false,
       apiUrl: mapView.mapData.directionapi,
       searchview: false,
-      removeMarkers: []
+      removeMarkers: [],
+      getdir: false
   	}
   },
   props: {
@@ -176,6 +182,15 @@ const mapview = Vue.component('mapview', {
     },
     "sidebar.index": function() {
       this.getDirections();
+    },
+    "current.position": function() {
+      if (this.getdir){
+        var post = this.current.position._latlng;
+        post['next'] = [this.sidebar['markers'][0]._latlng];
+        this.routeInfo = false;
+        this.getRouteData(post, true);
+        this.getdir = false;
+      }
     }
   },
   created() {   
@@ -190,6 +205,9 @@ const mapview = Vue.component('mapview', {
     this.map.on('locationerror', this.onLocationError);
   },
   methods: {
+    goToGeoJson: function(geometry) {
+      this.map.panTo(geometry.coordinates[0].reverse())
+    },
     cleanPostData: function() {
       for (var it=0; it<mapView.postdata.length; it++){
         const post = mapView.postdata[it];
@@ -217,7 +235,7 @@ const mapview = Vue.component('mapview', {
         var sum = routeData.routes.reduce(function(a, b){
           return a + b['distance'];
         }, 0);
-        var directions = ''
+        var directions = []
         for (var rd=0; rd<routeData.routes.length; rd++){
           for(var lg=0; lg<routeData.routes[rd]['legs'].length; lg++){
            for (var st=0; st<routeData.routes[rd]['legs'][lg]['steps'].length; st++){
@@ -228,7 +246,8 @@ const mapview = Vue.component('mapview', {
               } else {
                 instruction = `${item.maneuver.type} ${item.maneuver.modifier ? item.maneuver.modifier : ''} ${item.name ? 'on ' + item.name: ''}`
               }
-              directions += ` ${instruction} | ${(item.distance*0.000621371192).toFixed(2)} miles | ${(item.duration/60).toFixed(2)} minutes<br>`
+              var direction = `${instruction} | ${(item.distance*0.000621371192).toFixed(2)} miles | ${(item.duration/60).toFixed(2)} minutes<br>`
+              directions.push({'direction': direction, 'geometry': item.geometry})
            }
           }
         }
@@ -244,6 +263,10 @@ const mapview = Vue.component('mapview', {
     locate: function(){
       this.map.locate({setView: true});
     },
+    getCurrentLocDirections: function() {
+      this.getdir = true;
+      this.locate();
+    },
     onLocationFound: function(e) {
       if (this.current.position) {
         this.map.removeLayer(this.current.position);
@@ -254,9 +277,6 @@ const mapview = Vue.component('mapview', {
 
       this.current.position = L.marker(e.latlng).addTo(this.map)
       .bindPopup("You are within " + radius + " meters from this point").openPopup();
-      var post = e.latlng;
-      post['next'] = [this.sidebar['markers'][0]._latlng];
-      this.getRouteData(post, true);
       this.current.accuracy = L.circle(e.latlng, radius).addTo(this.map);
     },
     onLocationError: function(e) {
