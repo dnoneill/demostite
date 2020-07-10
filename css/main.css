@@ -68,8 +68,8 @@ a {
 
 #map {
   position:absolute;
-  width:60vw;
-  height:100vh;
+  width:60%;
+  height:100%;
 }
 
 /* .page-content {
@@ -78,8 +78,8 @@ a {
 } */
 
 .sidebar {
-	height:100vh;
-	width:40vw;
+	height:100%;
+	width:40%;
 	background-color:#fff;
 	position:fixed!important;
 	z-index:1;
@@ -248,34 +248,34 @@ display: inline-block;
         position: absolute;
         left: 0;
         top: 0;
-        height: 40vh;
-        width: 100vw;
+        height: 40%;
+        width: 100%;
     }
 
     .leaflet-top {
-      height: 40vh;
+      height: 40%;
       overflow: auto;
     }
 
     .sidebar {
         position: absolute;
         left: 0;
-        top: 40vh;
-        height: 60vh;
-        width: 100vw
+        top: 40%;
+        height: 60%;
+        width: 100%
     }
 
 	  div.wrapper {
-		    width: 100vw;
-		    height: 40vh;
+		    width: 100%;
+		    height: 40%;
 		    overflow: auto;
 	  }
 
     .sub-menu, .menu-button {
-	     right: 0vw;
+	     right: 0%;
 	  }
 	#choose {
-	     bottom: 60vh;
+	     bottom: 60%;
 	  }
 }
 
@@ -286,19 +286,19 @@ display: inline-block;
 
     #map {
         top: 0;
-        height: 100vh;
-        width: 50vw;
+        height: 100%;
+        width: 50%;
         left: 0
     }
 
     .sidebar {
-    	width: 50vw;
+    	width: 50%;
       position: absolute;
       right: 0;
     }
 
 	  .sub-menu, .menu-button {
-	     right: 50vw;
+	     right: 50%;
 	  }
 	#choose {
 	bottom: 0;
@@ -306,8 +306,8 @@ display: inline-block;
 
     div.wrapper {
 		   top: 0;
-       width: 50vw;
-       height: 100vh;
+       width: 50%;
+       height: 100%;
 		   overflow: auto;
 	  }
 }
@@ -316,27 +316,27 @@ display: inline-block;
     .sidebar, #map {
         position: absolute;
         top: 0;
-        height: 100vh;
+        height: 100%;
       }
 
     #map {
         left: 0;
-        width: 55vw;
+        width: 55%;
     }
     .sidebar {
-        width: 45vw;
+        width: 45%;
         right: 0;
     }
     .sub-menu, .menu-button {
-	      right: 45vw;
+	      right: 45%;
 	  }
 	#choose {
 	bottom: 0;
 	}
     div.wrapper {
 		   left: 0;
-       width: 55vw;
-       height: 100vh;
+       width: 55%;
+       height: 100%;
 		   overflow: auto;
 	  }
 }
@@ -349,32 +349,32 @@ display: inline-block;
       position: absolute;
       left: 0;
       top: 0;
-      height: 40vh;
-      width: 100vw;
+      height: 40%;
+      width: 100%;
   }
 
   .leaflet-top {
-    height: 40vh;
+    height: 40%;
     overflow: auto;
   }
 
   .sidebar {
-      height: 60vh;
-      width: 100vw;
-      top: 40vh;
+      height: 60%;
+      width: 100%;
+      top: 40%;
   }
 
   .sub-menu, .menu-button {
-	   right: 0vw;
+	   right: 0%;
   }
 
   #choose {
-	 bottom:60vh;
+	 bottom:60%;
   }
 
   div.wrapper {
-      width: 100vw;
-      height: 40vh;
+      width: 100%;
+      height: 40%;
       overflow: auto;
   }
 }
