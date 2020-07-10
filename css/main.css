@@ -364,7 +364,7 @@ display: inline-block;
     }
 
   .leaflet-panel-layers.compact {
-    max-height: 45%;
+    max-height: 64%;
     overflow: auto;
   }
 
