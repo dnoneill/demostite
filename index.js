@@ -133,7 +133,7 @@ const mapview = Vue.component('mapview', {
   data: function() {
   	return {
       map: '',
-      markergrouping: 'grouped',
+      markergrouping: mapView.mapData['marker-grouping'],
       overLayers: [],
       markers: '',
       mapMarkers: [],
@@ -207,8 +207,8 @@ const mapview = Vue.component('mapview', {
     },
     getDirections: function(maps=false) {
       var maps = maps ? maps : this.mapMarkers[this.sidebar.index];
+      this.mapMarkers.map(element => element['geojson'] ? this.updateGeoJson(element['geojson'], 'red') : '');
       if (maps && maps['geojson'] && this.apiUrl){
-        this.mapMarkers.map(element => element['geojson'] ? this.updateGeoJson(element['geojson'], 'red') : '')
         const routeData = maps['routeData'];
         this.updateGeoJson(maps['geojson'], 'blue');
         maps['geojson'].bringToFront();
@@ -273,7 +273,7 @@ const mapview = Vue.component('mapview', {
       if (post['next'] && this.apiUrl){
         var url = `${this.apiUrl}${post['lng']},${post['lat']};${post['next'][0]['lng']},${post['next'][0]['lat']}?overview=full&geometries=geojson&steps=true`;
         axios.get(url).then((response) => {
-          if (post['index']){
+          if (Number.isInteger(post['index'])){
             this.$set(this.mapMarkers[post['index']], 'routeData', response.data);
           }
           var geojson = this.mapRoute(response.data, post);
@@ -287,7 +287,7 @@ const mapview = Vue.component('mapview', {
       var latlngs = data.routes.slice(-1).map(element => element['geometry']);
       var geojson = L.geoJSON(latlngs).addTo(this.map);
       this.updateGeoJson(geojson, 'red');
-      if (post['index']){
+      if (Number.isInteger(post['index'])){
         this.$set(this.mapMarkers[post['index']], 'geojson', geojson);
       } else {
         return geojson;
@@ -326,8 +326,9 @@ const mapview = Vue.component('mapview', {
       }).addTo(this.map);
       this.createMarkers();
       this.addMarkers();
-      this.map.setView(setView);
-      this.map.fitBounds(this.markers.getBounds());
+      var setview = mapView.mapData.setView.split(',');
+      setview = setview.map(element => parseFloat(element.replace(/[^0-9.-]/g,'')));
+      this.map.setView([setview[0], setview[1]], setview[2]);
     },
     lightBox: function() {
       var images = document.getElementsByClassName("image");
@@ -349,7 +350,6 @@ const mapview = Vue.component('mapview', {
       if (this.layerControl) {
         this.layerControl.remove(this.map);
       }
-
       this.map.eachLayer((existinglayer) => {
         if (this.removeMarkers.indexOf(existinglayer['_leaflet_id']) > -1){
           existinglayer.remove();
@@ -371,8 +371,8 @@ const mapview = Vue.component('mapview', {
           this.layerControl.addTo(this.map);
           group.addTo(this.map)
         } else if (this.markergrouping == 'single') {
-          this.removeMarkers = this.removeMarkers.concat(markers.map(element => element['_leaflet_id']))
           overLayers.push({"name":key, icon: image, active: true, "layer": L.layerGroup(markers)})
+          this.removeMarkers = this.removeMarkers.concat(markers.map(element => element['_leaflet_id']))
        }
         
       }
