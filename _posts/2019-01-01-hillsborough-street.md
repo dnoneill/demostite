@@ -45,7 +45,7 @@ events:
 lat: '35.787773'
 layout: post
 lng: '-78.668037'
-order: 32
+order: 33
 permalink: places/hillsborough-street/
 place: hillsborough-street
 title: Hillsborough Street

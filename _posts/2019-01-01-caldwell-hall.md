@@ -21,7 +21,7 @@ events:
 lat: '35.7868'
 layout: post
 lng: '-78.665802'
-order: 17
+order: 31
 permalink: places/caldwell-hall/
 place: caldwell-hall
 title: Caldwell Hall

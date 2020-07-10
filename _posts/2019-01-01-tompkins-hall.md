@@ -25,7 +25,7 @@ events:
 lat: '35.786701'
 layout: post
 lng: '-78.665199'
-order: 16
+order: 30
 permalink: places/tompkins-hall/
 place: tompkins-hall
 title: Tompkins Hall

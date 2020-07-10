@@ -47,7 +47,7 @@ events:
 lat: '35.783961'
 layout: post
 lng: '-78.671422'
-order: 20
+order: 11
 permalink: places/stewart-theatre/
 place: stewart-theatre
 title: Stewart Theatre

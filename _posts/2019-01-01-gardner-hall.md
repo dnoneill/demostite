@@ -48,7 +48,7 @@ events:
 lat: '35.7869'
 layout: post
 lng: '-78.672401'
-order: 6
+order: 20
 permalink: places/gardner-hall/
 place: gardner-hall
 title: Gardner Hall

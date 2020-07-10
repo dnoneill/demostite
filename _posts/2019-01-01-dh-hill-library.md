@@ -99,7 +99,7 @@ events:
 lat: '35.787601'
 layout: post
 lng: '-78.669998'
-order: 10
+order: 34
 permalink: places/dh-hill-library/
 place: dh-hill-library
 title: D.H. Hill Library

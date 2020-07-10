@@ -189,7 +189,7 @@ events:
 lat: '35.783798'
 layout: post
 lng: '-78.671097'
-order: 8
+order: 10
 permalink: places/talley-student-center/
 place: talley-student-center
 title: Talley Student Center

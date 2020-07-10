@@ -61,7 +61,7 @@ events:
 lat: '35.783595'
 layout: post
 lng: '-78.667499'
-order: 7
+order: 8
 permalink: places/greek-letters/
 place: greek-letters
 title: Greek Letters

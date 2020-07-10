@@ -108,7 +108,7 @@ events:
 lat: '35.784901'
 layout: post
 lng: '-78.664101'
-order: 19
+order: 4
 permalink: places/winslow-hall/
 place: winslow-hall
 title: Winslow Hall

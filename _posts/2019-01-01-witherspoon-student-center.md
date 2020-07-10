@@ -264,7 +264,7 @@ events:
 lat: '35.785099'
 layout: post
 lng: '-78.6745'
-order: 13
+order: 12
 permalink: places/witherspoon-student-center/
 place: witherspoon-student-center
 title: Witherspoon Student Center

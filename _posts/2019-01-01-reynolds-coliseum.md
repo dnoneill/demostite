@@ -196,7 +196,7 @@ events:
 lat: '35.783501'
 layout: post
 lng: '-78.669899'
-order: 5
+order: 9
 permalink: places/reynolds-coliseum/
 place: reynolds-coliseum
 title: Reynolds Coliseum

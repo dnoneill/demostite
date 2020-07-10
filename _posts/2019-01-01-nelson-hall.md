@@ -46,7 +46,7 @@ events:
 lat: '35.788399'
 layout: post
 lng: '-78.674004'
-order: 23
+order: 19
 permalink: places/nelson-hall/
 place: nelson-hall
 title: Nelson Hall

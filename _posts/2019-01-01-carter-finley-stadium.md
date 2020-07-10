@@ -128,7 +128,7 @@ events:
 lat: '35.800804'
 layout: post
 lng: '-78.719482'
-order: 14
+order: 16
 permalink: places/carter-finley-stadium/
 place: carter-finley-stadium
 title: Carter-Finley Stadium

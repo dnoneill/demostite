@@ -27,7 +27,7 @@ events:
 lat: '35.785073'
 layout: post
 lng: '-78.661771'
-order: 28
+order: 1
 permalink: places/chancellors-residence/
 place: chancellors-residence
 title: Chancellors Residence

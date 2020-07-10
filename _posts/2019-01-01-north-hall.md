@@ -43,7 +43,7 @@ events:
 lat: '35.787267'
 layout: post
 lng: '-78.664749'
-order: 26
+order: 29
 permalink: places/north-hall/
 place: north-hall
 title: North Hall

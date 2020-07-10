@@ -47,7 +47,7 @@ events:
 lat: '35.787068'
 layout: post
 lng: '-78.670528'
-order: 31
+order: 35
 permalink: places/brickyard/
 place: brickyard
 title: Brickyard

@@ -41,7 +41,7 @@ events:
 lat: '35.786429'
 layout: post
 lng: '-78.672691'
-order: 11
+order: 21
 permalink: places/thomas-hall/
 place: thomas-hall
 title: Thomas Hall

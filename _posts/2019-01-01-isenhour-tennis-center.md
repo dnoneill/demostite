@@ -63,7 +63,7 @@ events:
 lat: '35.788336'
 layout: post
 lng: '-78.681077'
-order: 0
+order: 18
 permalink: places/isenhour-tennis-center/
 place: isenhour-tennis-center
 title: Isenhour Tennis Center

@@ -37,7 +37,7 @@ events:
 lat: '35.803448'
 layout: post
 lng: '-78.721878'
-order: 25
+order: 17
 permalink: places/rbc-center/
 place: rbc-center
 title: RBC Center

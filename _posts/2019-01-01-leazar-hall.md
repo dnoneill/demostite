@@ -31,7 +31,7 @@ events:
 lat: '35.7854'
 layout: post
 lng: '-78.665604'
-order: 33
+order: 27
 permalink: places/leazar-hall/
 place: leazar-hall
 title: Leazar Hall

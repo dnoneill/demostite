@@ -29,7 +29,7 @@ events:
 lat: '35.786148'
 layout: post
 lng: '-78.675343'
-order: 27
+order: 13
 permalink: places/west-dunn-building/
 place: west-dunn-building
 title: West Dunn Building

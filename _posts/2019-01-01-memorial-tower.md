@@ -48,7 +48,7 @@ events:
 lat: '35.786098'
 layout: post
 lng: '-78.663498'
-order: 24
+order: 2
 permalink: places/memorial-tower/
 place: memorial-tower
 title: Memorial Tower

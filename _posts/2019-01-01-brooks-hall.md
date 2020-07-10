@@ -49,7 +49,7 @@ events:
 lat: '35.7845'
 layout: post
 lng: '-78.664902'
-order: 9
+order: 5
 permalink: places/brooks-hall/
 place: brooks-hall
 title: Brooks Hall
