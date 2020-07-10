@@ -89,6 +89,7 @@ const mapview = Vue.component('mapview', {
           <router-link v-if="sidebar.prev" class="prev" :to="sidebar.prev.hash">
             <i class="fa fa-chevron-circle-left"></i> {{sidebar.prev.title}}
           </router-link>
+          <a href="" v-if="!sidebar.prev"></a>
           <router-link v-if="sidebar.next" class="next" :to="sidebar.next.hash">
             {{sidebar.next.title}} <i class="fa fa-chevron-circle-right"></i>
           </router-link>
