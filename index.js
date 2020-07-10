@@ -296,6 +296,7 @@ const mapview = Vue.component('mapview', {
     buildPage: function() {
       var path = this.$route.path == '/' ? '/home/' : this.$route.path;
       path = this.cleanHash(path);
+      this.showRoute = false;
       this.searchview = false;
       var matchingpage = this.sitePages.filter(element => this.cleanHash(element['hash']) == path);
       if (matchingpage.length > 0){
