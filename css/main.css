@@ -254,10 +254,11 @@ display: inline-block;
 
     .leaflet-top {
       height: 100%;
+      overflow: auto;
     }
 
     .leaflet-panel-layers.compact {
-      height: 45%;
+      max-height: 45%;
       overflow: auto;
     }
 
@@ -358,7 +359,12 @@ display: inline-block;
   }
 
   .leaflet-top {
-    height: 40%;
+      height: 100%;
+      overflow: auto;
+    }
+
+  .leaflet-panel-layers.compact {
+    max-height: 45%;
     overflow: auto;
   }
 
