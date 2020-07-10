@@ -253,7 +253,11 @@ display: inline-block;
     }
 
     .leaflet-top {
-      height: 40%;
+      height: 100%;
+    }
+
+    .leaflet-panel-layers.compact {
+      height: 45%;
       overflow: auto;
     }
 
