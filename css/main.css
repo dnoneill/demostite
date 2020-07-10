@@ -480,10 +480,7 @@ padding-top: 6em;
   background-size: 20px 30px;
 }
 
-.next {
-  float: right;
-}
-
-.date {
-  display: none;
+.nextprev {
+  display: flex;
+  justify-content: space-between;
 }
