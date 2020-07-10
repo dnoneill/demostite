@@ -206,7 +206,8 @@ const mapview = Vue.component('mapview', {
   },
   methods: {
     goToGeoJson: function(geometry) {
-      this.map.panTo(geometry.coordinates[0].reverse())
+      const firstitem = geometry.coordinates[0];
+      this.map.panTo([firstitem[1], firstitem[0]])
     },
     cleanPostData: function() {
       for (var it=0; it<mapView.postdata.length; it++){
