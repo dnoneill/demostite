@@ -82,9 +82,13 @@ const mapview = Vue.component('mapview', {
       </button>
       <span v-if="routeInfo && showRoute">
         <div>~{{routeInfo.distance}} Miles, {{routeInfo.minutes}} minutes to {{sidebar.next.title}}</div>
-        <a v-for="direction in routeInfo.directions" v-on:click="goToGeoJson(direction.geometry)">
-          <span v-html="direction.direction"></span>
-        </a>
+        <ol>
+          <li v-for="direction in routeInfo.directions">
+            <a v-on:click="goToGeoJson(direction.geometry)">
+              <span v-html="direction.direction"></span>
+            </a>
+          </li>
+        </ol>
       </span>
       <span v-else-if="showRoute">Directions are loading</span>
       <header class="defaultheader">

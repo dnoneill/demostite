@@ -504,3 +504,8 @@ padding-top: 6em;
   display: flex;
   justify-content: space-between;
 }
+
+ol {
+  padding-left: 18px;
+  margin: 0px;
+}
