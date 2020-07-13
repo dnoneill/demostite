@@ -101,7 +101,7 @@ const mapview = Vue.component('mapview', {
             v-if="marker" v-html="marker.iconURL">
           </a>
         </span>
-        <button v-if="sidebar.next" class="showRouteButton" v-on:click="showRoute = !showRoute">
+        <button v-if="apiUrl && sidebar.markers" class="showRouteButton" v-on:click="showRoute = !showRoute">
           <i v-if="!showRoute" class="fas fa-directions"></i>
           <i v-else class="fa fa-window-close"></i>
         </button>
@@ -323,6 +323,7 @@ const mapview = Vue.component('mapview', {
     getRouteData: function(post, directions=false) {
       if (post['next'] && this.apiUrl){
         var url = `${this.apiUrl}${post['lng']},${post['lat']};${post['next'][0]['lng']},${post['next'][0]['lat']}?overview=full&geometries=geojson&steps=true`;
+        var vue = this;
         axios.get(url).then((response) => {
           if (Number.isInteger(post['index'])){
             this.$set(this.mapMarkers[post['index']], 'routeData', response.data);
@@ -333,7 +334,9 @@ const mapview = Vue.component('mapview', {
               'post': post,
               'routeData': response.data})
           }
-        })
+        }).catch(function(err){
+          vue.routeInfo.title = err.response.data.message;
+        });
       }
     },
     mapRoute: function(data, post) {
