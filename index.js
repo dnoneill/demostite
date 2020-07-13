@@ -1,7 +1,11 @@
 const searchview = Vue.component('searchview', {
   template: `
   <div>
-  <input v-model="searchterm" v-on:change="searchIndex()"/>
+  <div id="input-outer">
+    <input type="text" v-model="searchterm" v-on:change="searchIndex()"/>
+    <div v-on:click="clearSearch();" v-if="searchterm" class="clear">
+    </div>
+  </div>
   <input type="submit" value="Submit" v-on:submit="searchIndex()">
   <div v-if="results">
     <ul v-for="result in results">
@@ -36,6 +40,13 @@ const searchview = Vue.component('searchview', {
     this.buildIndex();
   },
   methods: {
+    clearSearch: function() {
+      this.searchterm = '';
+      this.results=[];
+      if (this.searchterm != this.$route.query['q']){
+        this.$router.push({query:{q: this.searchterm}});
+      }
+    },
     searchIndex: function() {
       var results = this.idx.search(this.searchterm);
       if (this.searchterm != this.$route.query['q']){

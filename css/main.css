@@ -509,3 +509,61 @@ ol {
   padding-left: 18px;
   margin: 0px;
 }
+
+#input-outer {
+  height: 2em;
+  border: 1px #777 solid;
+  position: relative;
+  padding: 0px;
+  border-radius: 4px;
+  width: 70%;
+  display: inline-block;
+}
+
+input[type="submit"] {
+  outline: none;
+  color: #666;
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 4px;
+  display: inline-block;
+  max-width: 25%;
+}
+
+#input-outer input {
+  height: 100%;
+  border: 0px;
+  outline: none;
+  margin: 0 0 0 0px;
+  color: #666;
+  box-sizing: border-box;
+  padding: 5px;
+  padding-right: 35px;
+  border-radius: 4px;
+}
+.clear {
+  position: absolute;
+  float: right;
+  height: 2em;
+  width: 2em;
+  top: 0px;
+  right: 0px;
+  background: #aaa;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0px 4px 4px 0px;
+}
+.clear:after {
+  content: "\274c";
+  position: absolute;
+  top: 4px;
+  right: 7px;
+}
+.clear:hover,
+.clear:focus {
+  background: #888;
+}
+.clear:active {
+  background: #666;
+}
