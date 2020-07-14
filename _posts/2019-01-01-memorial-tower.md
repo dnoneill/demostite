@@ -1,4 +1,5 @@
 ---
+leafleticon: /demostite/assets/leaflet/img/z_belltower.svg
 categories:
 - '1960'
 - '1980'
