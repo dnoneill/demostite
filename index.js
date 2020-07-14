@@ -215,6 +215,7 @@ const mapview = Vue.component('mapview', {
     },
     "sidebar.index": function() {
        this.routeInfo = false;
+       this.geoCurrent = '';
        var geoJSON = this.mapMarkers[this.sidebar.index] ? this.mapMarkers[this.sidebar.index]['geojson'] : '';
        this.updateRoutes(geoJSON);
     },
