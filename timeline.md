@@ -14,9 +14,14 @@ order: 4
 {% assign years = events | map: "event_decade" | compact | uniq | sort %}
 {% for year in years %}
 <h2><b>{{year}}'s</b></h2>{% assign yearevents = events | where_exp: 'item', 'item.event_decade == year' %}
-{% for events in yearevents %}
+{% assign sortedye = yearevents | sort: "year" %}
+{% assign groupedye = yearevents | sort: "year" | group_by: "year" %}
+{% for gye in groupedye %}
+{% assign ev = gye.items | sort_natural: "title" %}
+{% for events in ev %}
 <div>
   	{{events.year}} - <a href="#/places/{{events.categories}}">{{events.title }}</a>
   </div>
 	{% endfor %}
+{% endfor %}
 {% endfor %}

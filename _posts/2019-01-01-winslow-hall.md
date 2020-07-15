@@ -83,7 +83,7 @@ events:
   image_type: null
   redirect_from: /events/33/index.html
   start_date: '1889'
-  title: Former Slave Began 50 Year Career at University
+  title: Formerly Enslaved Woman Begins 50 Year Career at University
   year: '1889'
 - audio_id: null
   building: Winslow Hall
