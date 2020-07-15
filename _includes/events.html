@@ -26,14 +26,14 @@
 
       {% if event.image_id != null %}
       <p class="image">
-        <img src="https://iiif.lib.ncsu.edu/iiif/{{event.image_id}}/full/!400,425/0/default.jpg">
+        <img src="https://iiif.lib.ncsu.edu/iiif/{{event.image_id}}/full/!400,425/0/default.jpg" alt="{{event.excerpt}}">
       </p>
       <figcaption class="caption">{{event.excerpt}}</figcaption>
       {% endif %}
 
       {% if event.iiif_crop != null %}
       <p class="image">
-        <img src="{{event.iiif_crop}}">
+        <img src="{{event.iiif_crop}}" alt="{{event.excerpt}}">
         <figcaption class="caption">{{event.excerpt}}</figcaption>
       </p>
       {% endif %}
