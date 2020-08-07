@@ -29,13 +29,14 @@ const searchview = Vue.component('searchview', {
     }
   },
   props: {
-    'fields': Array
+    'fields': Array,
+    'searchcontent': Array
   },
   created() {  
     this.searchterm = this.$route.query['q'];
-    for (var si=0; si<searchItems.length; si++){
-      searchItems[si]['id'] = searchItems[si]['slug'];
-      this.searchitems[searchItems[si]['slug']] = searchItems[si];
+    for (var si=0; si<this.searchcontent.length; si++){
+      this.searchcontent[si]['id'] = this.searchcontent[si]['slug'];
+      this.searchitems[this.searchcontent[si]['slug']] = this.searchcontent[si];
     }
     this.buildIndex();
   },
@@ -66,9 +67,9 @@ const searchview = Vue.component('searchview', {
           this.field(field['field'], {'boost': field['boost']});
         }
       })
-      for (var si=0; si<searchItems.length; si++){
-        if (searchItems[si]['id']){
-          this.idx.add(searchItems[si]);
+      for (var si=0; si<this.searchcontent.length; si++){
+        if (this.searchcontent[si]['id']){
+          this.idx.add(this.searchcontent[si]);
         }
       }
       if (this.searchterm) {
@@ -134,7 +135,7 @@ const mapview = Vue.component('mapview', {
       </span>
       <span v-html="sidebar.content"></span>
       <div id="scriptholder"></div>
-      <searchview v-if="searchview" v-bind:fields=searchfields></searchview>
+      <searchview v-if="searchview" v-bind:fields=searchfields v-bind:searchcontent=searchData></searchview>
     </div>
   </div>
   <div id="map"></div>
@@ -176,6 +177,7 @@ const mapview = Vue.component('mapview', {
       sitePages: [],
       menuItems: [],
       postData: [],
+      searchData: [],
       menuType: this.menutype,
       menuShown: false,
       siteTitle: this.sitetitle,
@@ -279,6 +281,7 @@ const mapview = Vue.component('mapview', {
           this.sitePages.push(JSON.parse(JSON.stringify(post)))
         }
       }
+      this.searchData = this.sitePages.concat(this.postData)
     },
     getDirections: function(inputmaps=false) {
       var maps = inputmaps ? inputmaps : this.mapMarkers[this.sidebar.index];
