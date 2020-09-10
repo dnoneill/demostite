@@ -80,7 +80,7 @@ events:
   year: '1970'
 - audio_id: sa-rwb-006
   building: D.H. Hill Library
-  categories: d.h.-hill-library
+  categories: dh-hill-library
   description: Edward Walker was hired as a mail clerk, becoming the first full-time
     African-American staff member of the library.
   event_decade: '1950'

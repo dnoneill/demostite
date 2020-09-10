@@ -20,7 +20,8 @@ order: 4
 {% assign ev = gye.items | sort_natural: "title" %}
 {% for events in ev %}
 <div>
-  	{{events.year}} - <a href="#/places/{{events.categories}}">{{events.title }}</a>
+	{% assign post = site.posts | where_exp: "item", "item.events.first.categories == events.categories" %}
+  	{{events.year}} - <a href="#{{post.first.url}}">{{events.title }}</a>
   </div>
 	{% endfor %}
 {% endfor %}
