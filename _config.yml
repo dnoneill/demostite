@@ -15,8 +15,9 @@ encoding: utf-8
 
 # --STYLES--
 accent_color: rgb(204, 0, 1)  # accent color can be any css accepted value
-accent_font: Glypha  # Gogle Fonts import link is in head.html. You can specify the accent font here and it will add it to the main.css
-
+accent_font: 'Univers bold' 
+base_font: 'Univers light'
+  
 # --MAP SETTINGS--
 mapsettings:
   map-tileset: 'https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png'
