@@ -11,6 +11,8 @@ Initially conceived as a human-guided walking tour about African-American histor
 
 For questions and/or feedback please email <a href="mailto:mgfragol@ncsu.edu">Marian Fragola</a>
 
-<form action="#{{first.url}}" method="get" class="start">
-   <button type="submit">Start Tour <i class="far fa-play-circle"></i></button>
-</form>
+<p class="start">
+	<a type="button" href="#{{first.url}}">
+		Start Tour <i class="far fa-play-circle"></i>
+	</a>
+</p>

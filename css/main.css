@@ -612,7 +612,7 @@ input[type="submit"] {
   text-align: center;
 }
 
-.start button {
+.start a{
   background-color: {{site.accent_color}};
   border: none;
   color: white;
