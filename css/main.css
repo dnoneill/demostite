@@ -624,3 +624,8 @@ input[type="submit"] {
   margin: 4px 2px;
   cursor: pointer;
 }
+
+.headerimage {
+  max-width: 100%;
+  max-height: 20px;
+}

@@ -2,6 +2,7 @@
 
 # --SITE SETTINGS--
 title: "Red, White and Black"
+headerimage: /images/rwb.png
 email: dchildress@library.ucla.edu
 description:
 baseurl: "/demostite" # the subpath of your site, e.g. /blog/
