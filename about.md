@@ -1,9 +1,13 @@
 ---
 layout: page
-title: Contact & Credits
-permalink: /candc/
+title: About
+permalink: /about/
 order: 5
 ---
+
+## Project History
+The Red, White & Black mobile tour is an audio and photographic guide to African-American history at NC State University for your mobile device. This historical walking tour of NC State uses a location-aware campus map. Browse events by date or place and view related historical images. Red, White & Black features images and events from Special Collections Research Center’s Historical State.
+
 ## Contact
 For questions and/or feedback please email <a href="mailto:mgfragol@ncsu.edu">Marian Fragola at mgfragol@ncsu.edu</a>
 
