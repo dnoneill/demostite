@@ -1,11 +1,6 @@
 ---
-categories:
-- '1950'
-- '1960'
-- '2010'
 events:
-- audio_id: null
-  building: Isenhour Tennis Center
+- building: Isenhour Tennis Center
   categories: isenhour-tennis-center
   description: Irwin Holmes became co-captain of the tennis team, making him the first
     African American athletics team captain at NC State.
@@ -13,17 +8,14 @@ events:
   event_id: '0'
   excerpt: Irwin Holmes became co-captain of the tennis team, making him the first
     African American athletics team captain at NC State.
-  iiif_crop: null
   image id (orig): '0012024'
-  image_caption: null
+  image_caption: Irwin Holmes on tennis court
   image_id: '0012024'
-  image_type: null
-  redirect_from: null
+  image_link: https://d.lib.ncsu.edu/collections/catalog/ua023_004-004-am0027-000-021
   start_date: 01/01/1960
-  title: First African-American athletics team captain
+  title: First African American Athletics Team Captain
   year: '1960'
-- audio_id: null
-  building: Isenhour Tennis Center
+- building: Isenhour Tennis Center
   categories: isenhour-tennis-center
   description: President Obama announced the establishment of the Next Generation
     Power Electronics Innovation Institute, based at NC State, with $140 million in
@@ -33,33 +25,30 @@ events:
   excerpt: President Obama announced the establishment of the Next Generation Power
     Electronics Innovation Institute, based at NC State, with $140 million in federal
     funding including $70 million from the Department of Energy.
-  iiif_crop: null
   image id (orig): funk_tennisCenter
-  image_caption: null
+  image_caption: J. W. Isenhour Tennis Center
   image_id: funk_tennisCenter
-  image_type: null
-  redirect_from: null
-  start_date: 01/01/2014
+  image_link: https://d.lib.ncsu.edu/collections/catalog/funk_tennisCenter
+  start_date: 01/15/2014
   title: President Barack Obama visits
   year: '2014'
 - audio_id: sa-rwb-004
   building: Isenhour Tennis Center
   categories: isenhour-tennis-center
-  description: African-American student Irwin Holmes joined the tennis team, making
+  description: African American student Irwin Holmes joined the tennis team, making
     it the first integrated athletic team at State College.
   event_decade: '1950'
   event_id: '49'
-  excerpt: African-American student Irwin Holmes joined the tennis team, making it
+  excerpt: African American student Irwin Holmes joined the tennis team, making it
     the first integrated athletic team at State College.
-  iiif_crop: null
   image id (orig): '0012024'
-  image_caption: null
+  image_caption: Irwin Holmes on tennis court
   image_id: '0012024'
-  image_type: null
+  image_link: https://d.lib.ncsu.edu/collections/catalog/ua023_004-004-am0027-000-021
   redirect_from: /events/57/index.html
-  start_date: 01/01/1958
+  start_date: 01/01/1957
   title: First Integrated Athletic Team
-  year: '1958'
+  year: '1957'
 lat: '35.788336'
 layout: post
 lng: '-78.681077'

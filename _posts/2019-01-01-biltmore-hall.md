@@ -1,9 +1,6 @@
 ---
-categories:
-- '1990'
 events:
-- audio_id: null
-  building: Biltmore Hall
+- building: Biltmore Hall
   categories: biltmore-hall
   description: Chavonda Jacobs-Young was awarded a Ph.D. She had previously earned
     a Bachelors of Science degree (1989) and Masters of Science degree (1992). She
@@ -17,12 +14,10 @@ events:
     African American woman in the United States to earn a Ph.D. in paper science.
     She later became associate administrator for national programs for the USDA's
     Agricultural Research Service.
-  iiif_crop: null
   image id (orig): mc00336-BiltmoreHall-Jul2014
-  image_caption: null
+  image_caption: Biltmore Hall
   image_id: mc00336-BiltmoreHall-Jul2014
-  image_type: null
-  redirect_from: null
+  image_link: https://d.lib.ncsu.edu/collections/catalog/mc00336-BiltmoreHall-Jul2014
   start_date: 01/01/1998
   title: Chavonda Jacobs-Young awarded a Ph.D.
   year: '1998'

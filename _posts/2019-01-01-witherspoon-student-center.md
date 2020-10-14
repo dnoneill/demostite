@@ -1,46 +1,34 @@
 ---
-categories:
-- '1970'
-- '1980'
-- '1990'
-- '2000'
 events:
-- audio_id: null
-  building: Witherspoon Student Center
+- building: Witherspoon Student Center
   categories: witherspoon-student-center
   description: This sorority has been an international service organization established
-    by African-American college-educated women.
+    by African American college-educated women.
   event_decade: '1970'
   event_id: '16'
   excerpt: This sorority has been an international service organization established
-    by African-American college-educated women.
-  iiif_crop: null
+    by African American college-educated women.
   image id (orig): funk_witherspoon
-  image_caption: null
+  image_caption: Witherspoon Student Center
   image_id: funk_witherspoon
-  image_type: null
-  redirect_from: null
+  image_link: https://d.lib.ncsu.edu/collections/catalog/funk_witherspoon
   start_date: 01/01/1976
   title: Alpha Kappa Alpha sorority chapter established
   year: '1976'
-- audio_id: null
-  building: Witherspoon Student Center
+- building: Witherspoon Student Center
   categories: witherspoon-student-center
   description: This fraternity's fundamental purpose is achievement.
   event_decade: '1980'
   event_id: '20'
   excerpt: This fraternity's fundamental purpose is achievement.
-  iiif_crop: null
   image id (orig): funk_witherspoon
-  image_caption: null
+  image_caption: Witherspoon Student Center
   image_id: funk_witherspoon
-  image_type: null
-  redirect_from: null
+  image_link: https://d.lib.ncsu.edu/collections/catalog/funk_witherspoon
   start_date: 01/01/1980
   title: Kappa Alpha Psi fraternity chapter established
   year: '1980'
-- audio_id: null
-  building: Witherspoon Student Center
+- building: Witherspoon Student Center
   categories: witherspoon-student-center
   description: This fraternity was founded on the principles of brotherhood, scholarship,
     and service,
@@ -48,17 +36,14 @@ events:
   event_id: '21'
   excerpt: This fraternity was founded on the principles of brotherhood, scholarship,
     and service,
-  iiif_crop: null
   image id (orig): funk_witherspoon
-  image_caption: null
+  image_caption: Witherspoon Student Center
   image_id: funk_witherspoon
-  image_type: null
-  redirect_from: null
+  image_link: https://d.lib.ncsu.edu/collections/catalog/funk_witherspoon
   start_date: 01/01/1982
   title: Phi Beta Sigma fraternity chapter established
   year: '1982'
-- audio_id: null
-  building: Witherspoon Student Center
+- building: Witherspoon Student Center
   categories: witherspoon-student-center
   description: June became the first African American to serve as editor of the student
     newspaper.
@@ -66,17 +51,14 @@ events:
   event_id: '27'
   excerpt: June became the first African American to serve as editor of the student
     newspaper.
-  iiif_crop: null
   image id (orig): mc00336-WitherspoonStudentCenter-Jun2014
-  image_caption: null
+  image_caption: Witherspoon Student Center
   image_id: mc00336-WitherspoonStudentCenter-Jun2014
-  image_type: null
-  redirect_from: null
+  image_link: https://d.lib.ncsu.edu/collections/catalog/mc00336-WitherspoonStudentCenter-Jun2014
   start_date: 01/01/1989
   title: Dwuan June, Editor of Technician
   year: '1989'
-- audio_id: null
-  building: Witherspoon Student Center
+- building: Witherspoon Student Center
   categories: witherspoon-student-center
   description: This sorority was founded on the precepts of scholarship, service,
     finer womanhood and sisterly love.
@@ -84,17 +66,14 @@ events:
   event_id: '29'
   excerpt: This sorority was founded on the precepts of scholarship, service, finer
     womanhood and sisterly love.
-  iiif_crop: null
   image id (orig): funk_witherspoonStudentCenter
-  image_caption: null
+  image_caption: Witherspoon Student Center
   image_id: funk_witherspoonStudentCenter
-  image_type: null
-  redirect_from: null
+  image_link: https://d.lib.ncsu.edu/collections/catalog/funk_witherspoonStudentCenter
   start_date: 01/01/1990
   title: Zeta Phi Beta sorority chapter established
   year: '1990'
-- audio_id: null
-  building: Witherspoon Student Center
+- building: Witherspoon Student Center
   categories: witherspoon-student-center
   description: 'The building formerly known as the Student Center Annex was dedicated
     on this date to honor Dr. Augustus McIver Witherspoon. It thus became the first
@@ -103,7 +82,7 @@ events:
     to receive a Ph.D. from NC State. He joined the faculty as Instructor of Botany
     and eventually held the following posts at NCSU: Full Professor, Assistant Dean,
     Acting Dean and Associate Dean of the Graduate School, Associate Provost and Coordinator
-    of African-American Affairs.'
+    of African American Affairs.'
   event_decade: '1990'
   event_id: '31'
   excerpt: The building formerly known as the Student Center Annex was dedicated on
@@ -113,14 +92,12 @@ events:
     a Ph.D. from NC State. He joined the faculty as Instructor of Botany and eventually
     held the following posts at NCSU&#58; Full Professor, Assistant Dean, Acting Dean
     and Associate Dean of the Graduate School, Associate Provost and Coordinator of
-    African-American Affairs.
-  iiif_crop: null
+    African American Affairs.
   image id (orig): funk_witherspoonStudentCenter
-  image_caption: null
+  image_caption: Witherspoon Student Center
   image_id: funk_witherspoonStudentCenter
-  image_type: null
-  redirect_from: null
-  start_date: 01/01/1995
+  image_link: https://d.lib.ncsu.edu/collections/catalog/funk_witherspoonStudentCenter
+  start_date: 04/01/1995
   title: Witherspoon Student Center dedicated
   year: '1995'
 - audio_id: sa-rwb-025
@@ -136,14 +113,13 @@ events:
     (later renamed Witherspoon Student Center). In 1992, following months of student
     and faculty protests, NCSU administrators granted the African American Cultural
     Center an operating budget.
-  iiif_crop: null
   image id (orig): '0226640'
-  image_caption: null
+  image_caption: African-American center opens
   image_id: '0226640'
-  image_type: null
+  image_link: https://d.lib.ncsu.edu/collections/catalog/0226640
   redirect_from: /events/58/index.html
   start_date: 01/01/1991
-  title: African-American Cultural Center Opens
+  title: African American Cultural Center Opens
   year: '1991'
 - audio_id: sa-rwb-032
   building: Witherspoon Student Center
@@ -166,13 +142,13 @@ events:
     the Omega Psi Phi fraternity aided in the rechartering of the NC State NAACP chapter
     in 1994. The NAACP chapter met for 7 years; in 2001, the chapter again became
     inactive.
-  iiif_crop: null
   image id (orig): funk_dSC07257
-  image_caption: null
+  image_caption: 'Shack-A-Thon fundraiser for Habitat for Humanity, 2007: SAAC, NAACP,
+    NPHC, and NSBE'
   image_id: funk_dSC07257
-  image_type: null
+  image_link: https://d.lib.ncsu.edu/collections/catalog/funk_dSC07257
   redirect_from: /events/49/index.html
-  start_date: 01/01/2005
+  start_date: 08/25/2005
   title: Student Chapter of NAACP Re-forms
   year: '2005'
 - audio_id: sa-rwb-031
@@ -181,20 +157,19 @@ events:
   description: African American students participated in a sit-in at a Student Senate
     meeting to express concern for the lack of funding for African American organizations.
     Out of $40,000 of appropriations, African American organizations received a mere
-    $735. The Student Senate agreed to send the bill back to committee for re-evaluation.
+    $755. The Student Senate agreed to send the bill back to committee for re-evaluation.
   event_decade: '2000'
   event_id: '57'
   excerpt: African American students participated in a sit-in at a Student Senate
     meeting to express concern for the lack of funding for African American organizations.
     Out of $40,000 of appropriations, African American organizations received a mere
-    $735. The Student Senate agreed to send the bill back to committee for re-evaluation.
-  iiif_crop: null
+    $755. The Student Senate agreed to send the bill back to committee for re-evaluation.
   image id (orig): mc00336-WitherspoonStudentCenter-Jun2014
-  image_caption: null
+  image_caption: Witherspoon Student Center
   image_id: mc00336-WitherspoonStudentCenter-Jun2014
-  image_type: null
+  image_link: https://d.lib.ncsu.edu/collections/catalog/mc00336-WitherspoonStudentCenter-Jun2014
   redirect_from: /events/48/index.html
-  start_date: 01/01/2004
+  start_date: 10/20/2004
   title: Students Protest Appropriations for African American Clubs
   year: '2004'
 - audio_id: sa-rwb-028
@@ -208,11 +183,10 @@ events:
   excerpt: A crowd of approximately 500 students and faculty members rallied in Witherspoon
     in support of affirmative action. Students opposed UNC system President Molly
     Broad's proposal to eliminate race based programs within the UNC system.
-  iiif_crop: null
   image id (orig): funk_witherspoonStudentCenter
-  image_caption: null
+  image_caption: Witherspoon Student Center
   image_id: funk_witherspoonStudentCenter
-  image_type: null
+  image_link: https://d.lib.ncsu.edu/collections/catalog/funk_witherspoonStudentCenter
   redirect_from: /events/46/index.html
   start_date: 01/01/1998
   title: Students Rally In Support of Affirmative Action
@@ -227,13 +201,13 @@ events:
     life at NCSU" and his hope that The Nubian Message become "the media voice for
     African Americans at NC State" a publication where people can learn about different
     aspects of your culture, as well as find useful information about State's campus."
-    Because The Nubian Message received no University funding and Nubian staff was
+    Because The Nubian Message received no university funding and Nubian staff was
     prohibited from using NCSU media equipment, the first issue was published with
     help from North Carolina Central University. Recalling the paper's initial struggles
     Williamson stated, "It was a real pain to have to go all the way to Durham to
     work, but the people at Central were very helpful and understanding. We owe them
     a lot. If it wasn't for their newspaper staff, we probably would never have had
-    a first issue." Following publication of the first issue, the University allowed
+    a first issue." Following publication of the first issue, the university allowed
     the Nubian staff to utilize campus media equipment.
   event_decade: '1990'
   event_id: '94'
@@ -244,21 +218,20 @@ events:
     and his hope that The Nubian Message become "the media voice for African Americans
     at NC State" a publication where people can learn about different aspects of your
     culture, as well as find useful information about State's campus." Because The
-    Nubian Message received no University funding and Nubian staff was prohibited
+    Nubian Message received no university funding and Nubian staff was prohibited
     from using NCSU media equipment, the first issue was published with help from
     North Carolina Central University. Recalling the paper's initial struggles Williamson
     stated, "It was a real pain to have to go all the way to Durham to work, but the
     people at Central were very helpful and understanding. We owe them a lot. If it
     wasn't for their newspaper staff, we probably would never have had a first issue."
-    Following publication of the first issue, the University allowed the Nubian staff
+    Following publication of the first issue, the university allowed the Nubian staff
     to utilize campus media equipment.
-  iiif_crop: null
   image id (orig): funk_brickyardAtDusk
-  image_caption: null
+  image_caption: Brickyard
   image_id: funk_brickyardAtDusk
-  image_type: null
+  image_link: https://d.lib.ncsu.edu/collections/catalog/funk_brickyardAtDusk
   redirect_from: /events/31/index.html
-  start_date: 01/01/1992
+  start_date: 11/30/1992
   title: Nubian Message Began Publication
   year: '1992'
 lat: '35.785099'

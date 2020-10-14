@@ -1,43 +1,37 @@
 ---
-categories:
-- '1960'
 events:
-- audio_id: null
-  building: Hillsborough Street
+- building: Hillsborough Street
   categories: hillsborough-street
   description: Baxley's on Hillsborough Street became the first restaurant near NC
-    State to serve African-Americans.
+    State to serve African Americans.
   event_decade: '1960'
   event_id: '85'
   excerpt: Baxley's on Hillsborough Street became the first restaurant near NC State
-    to serve African-Americans.
-  iiif_crop: null
+    to serve African Americans.
   image id (orig): mc00336_HillsboroughStreet-Feb2009
-  image_caption: null
+  image_caption: Hillsborough Street
   image_id: mc00336_HillsboroughStreet-Feb2009
-  image_type: null
+  image_link: https://d.lib.ncsu.edu/collections/catalog/mc00336_HillsboroughStreet-Feb2009
   redirect_from: /events/15/index.html
-  start_date: 01/01/1966
+  start_date: 1/1/1963
   title: Integration on Hillsborough Street
-  year: '1966'
-- audio_id: null
-  building: Hillsborough Street
+  year: '1963'
+- building: Hillsborough Street
   categories: hillsborough-street
   description: Student Government passed a resolution calling for racial integration
-    of public facilities in Raleigh. This is followed by a similar resolution from
+    of public facilities in Raleigh. This was followed by a similar resolution from
     the Faculty Senate. Student Government formed the Human Relations Committee to
     write letters to area merchants.
   event_decade: '1960'
   event_id: '86'
   excerpt: Student Government passed a resolution calling for racial integration of
-    public facilities in Raleigh. This is followed by a similar resolution from the
+    public facilities in Raleigh. This was followed by a similar resolution from the
     Faculty Senate. Student Government formed the Human Relations Committee to write
     letters to area merchants.
-  iiif_crop: null
   image id (orig): mc00336_HillsboroughStreet-Feb2009
-  image_caption: null
+  image_caption: Hillsborough Street
   image_id: mc00336_HillsboroughStreet-Feb2009
-  image_type: null
+  image_link: https://d.lib.ncsu.edu/collections/catalog/mc00336_HillsboroughStreet-Feb2009
   redirect_from: /events/14/index.html
   start_date: 01/01/1963
   title: Students and Faculty Call for Raleigh Integration

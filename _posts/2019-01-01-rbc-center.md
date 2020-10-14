@@ -1,6 +1,4 @@
 ---
-categories:
-- '2000'
 events:
 - audio_id: sa-rwb-033
   building: RBC Center
@@ -25,11 +23,10 @@ events:
     Lowe declared, "This is my school. I love this school. I poured my sweat for our
     years here and gave it my best. It was my hope and dream to come back here and
     do something special again."
-  iiif_crop: null
   image id (orig): 0008941
-  image_caption: null
+  image_caption: Sidney Lowe and his father
   image_id: 0008941
-  image_type: null
+  image_link: https://d.lib.ncsu.edu/collections/catalog/0008941
   redirect_from: /events/50/index.html
   start_date: 01/01/2006
   title: First African American Head Basketball Coach

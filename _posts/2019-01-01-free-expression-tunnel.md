@@ -1,10 +1,6 @@
 ---
-categories:
-- '2000'
-- '2010'
 events:
-- audio_id: null
-  building: Free Expression Tunnel
+- building: Free Expression Tunnel
   categories: free-expression-tunnel
   description: Originally held at the Free Expression Tunnel, this became an annual
     event to promote diversity and inclusion on campus.
@@ -12,37 +8,34 @@ events:
   event_id: '42'
   excerpt: Originally held at the Free Expression Tunnel, this became an annual event
     to promote diversity and inclusion on campus.
-  iiif_crop: null
   image id (orig): mc00336-Free-Expression-Tunnel-Feb-2012-01
-  image_caption: null
+  image_caption: Free Expression Tunnel
   image_id: mc00336-Free-Expression-Tunnel-Feb-2012-01
-  image_type: null
-  redirect_from: null
-  start_date: 01/01/2011
+  image_link: https://d.lib.ncsu.edu/collections/catalog/mc00336-Free-Expression-Tunnel-Feb-2012-01
+  start_date: 08/17/2011
   title: First Respect the Pack event
   year: '2011'
 - audio_id: sa-rwb-035
   building: Free Expression Tunnel
   categories: free-expression-tunnel
-  description: Racial epithets were painted in the tunnel.  When these were discovered,
+  description: Racial epithets were painted in the tunnel. When these were discovered,
     students protested against the offensive images by blocking entrance to the tunnel.
     Chancellor Woodson released a statement which declared "... we must create an
     environment and an overall sense of global awareness on campus that encourages
     and embraces all forms of diversity."
   event_decade: '2010'
   event_id: '52'
-  excerpt: Racial epithets were painted in the tunnel.  When these were discovered,
+  excerpt: Racial epithets were painted in the tunnel. When these were discovered,
     students protested against the offensive images by blocking entrance to the tunnel.
     Chancellor Woodson released a statement which declared "... we must create an
     environment and an overall sense of global awareness on campus that encourages
     and embraces all forms of diversity."
-  iiif_crop: null
   image id (orig): funk_freeExpression1
-  image_caption: null
+  image_caption: Free Expression Tunnel
   image_id: funk_freeExpression1
-  image_type: null
+  image_link: https://d.lib.ncsu.edu/collections/catalog/funk_freeExpression1
   redirect_from: /events/53/index.html
-  start_date: 01/01/2010
+  start_date: 11/01/2010
   title: Racial Epithets Painted In Freedom of Expression Tunnel
   year: '2010'
 - audio_id: sa-rwb-034
@@ -68,13 +61,12 @@ events:
     of improving the campus climate and possible revisions for Student Conduct practices
     and Free Expression Tunnel procedures. Students also held a "Unity Rally" to denounce
     the acts of racism.
-  iiif_crop: null
   image id (orig): 3funk_ObamaVisitsNCSU_034
-  image_caption: null
+  image_caption: Barack Obama speaking at rally at Reynolds Coliseum
   image_id: 3funk_ObamaVisitsNCSU_034
-  image_type: null
+  image_link: https://d.lib.ncsu.edu/collections/catalog/3funk_ObamaVisitsNCSU_034
   redirect_from: /events/52/index.html
-  start_date: 01/01/2008
+  start_date: 11/05/2008
   title: Racist Graffiti Directed at Obama
   year: '2008'
 lat: '35.785599'

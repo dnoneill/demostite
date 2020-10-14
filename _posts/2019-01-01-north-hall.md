@@ -1,6 +1,4 @@
 ---
-categories:
-- '1990'
 events:
 - audio_id: sa-rwb-023
   building: North Hall
@@ -31,13 +29,12 @@ events:
     to the end of his term. He cited personal reasons for his resignation and stated,
     "The pain and pressure has finally taken its toll physically, mentally, emotionally,
     and especially academically."
-  iiif_crop: null
   image id (orig): 0004108
-  image_caption: null
+  image_caption: North Residence Hall
   image_id: 0004108
-  image_type: null
+  image_link: https://d.lib.ncsu.edu/collections/catalog/0004108
   redirect_from: /events/43/index.html
-  start_date: 01/01/1990
+  start_date: 02/01/1990
   title: Brian Nixon attacked
   year: '1990'
 lat: '35.787267'
