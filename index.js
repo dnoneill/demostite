@@ -447,6 +447,8 @@ const mapview = Vue.component('mapview', {
     },
     addMarkers: function() {
       var groupedMarkers = _.groupBy(this.mapMarkers, function(b) { return b.group});
+      const gMKeys = Object.keys(groupedMarkers);
+      groupedMarkers = gMKeys.length < 2 && !gMKeys[0] ? _.groupBy(this.mapMarkers, function(b) { return b.marker.legendIcon}) : groupedMarkers;
       var overLayers = [];
       if (this.layerControl) {
         this.layerControl.remove(this.map);
@@ -462,6 +464,7 @@ const mapview = Vue.component('mapview', {
       for (var key in groupedMarkers){
         var markers = groupedMarkers[key].map(element => element['marker']);
         var image = [...new Set(markers.map(element=>element.legendIcon))]
+        key = key != image ? key : '';
         image = `<div style="width: ${100/image.length}%">${image.join("")}</div>`;
         if (this.markergrouping == 'grouped') {
           var group = L.featureGroup.subGroup(this.markers, markers);
@@ -475,8 +478,7 @@ const mapview = Vue.component('mapview', {
         } else if (this.markergrouping == 'single') {
           overLayers.push({"name":key, icon: image, active: true, "layer": L.layerGroup(markers)})
           this.removeMarkers = this.removeMarkers.concat(markers.map(element => element['_leaflet_id']))
-       }
-        
+       }  
       }
       if (this.markergrouping == 'single') {
         this.layerControl = new L.Control.PanelLayers(null, overLayers, {
@@ -496,8 +498,10 @@ const mapview = Vue.component('mapview', {
       for (var i=0; i<this.postData.length; i++){
         const post = JSON.parse(JSON.stringify(this.postData[i], this.replaceNull));
         var icon = post.leafleticon;
-        const iconindex = categories.indexOf(post.categories);
-        var counter = iconindex >= this.icons.length ? 0 : iconindex;
+        const iconname = post.categories.replace(" ", "_").toLowerCase();
+        const categoryicon = this.icons.findIndex(elem => iconname == elem.split('/').slice(-1)[0].split('.')[0].trim());
+        var iconindex = categoryicon > -1 ? categoryicon : categories.indexOf(post.categories);
+        iconindex = iconindex >= this.icons.length || iconindex == -1 ? 0 : iconindex;
         var iconurl = icon ? icon : this.baseurl + this.icons[iconindex];
         var order = post.order ? parseInt(post.order) : '';
         var mbox = new L.DivIcon({
