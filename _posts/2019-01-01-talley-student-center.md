@@ -159,7 +159,7 @@ events:
   year: '1988'
 lat: '35.783798'
 layout: post
-leafleticon: /demostite/assets/leaflet/img/group.svg
+leafleticon: /demostite/assets/leaflet/img/graduate.svg
 lng: '-78.671097'
 order: 10
 permalink: places/talley-student-center/

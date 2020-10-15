@@ -38,6 +38,7 @@ events:
   year: '1963'
 lat: '35.787773'
 layout: post
+leafleticon: /demostite/assets/leaflet/img/road.svg
 lng: '-78.668037'
 order: 33
 permalink: places/hillsborough-street/

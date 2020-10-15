@@ -27,6 +27,7 @@ events:
   year: '1969'
 lat: '35.785073'
 layout: post
+leafleticon: /demostite/assets/leaflet/img/house.svg
 lng: '-78.661771'
 order: 1
 permalink: places/chancellors-residence/

@@ -51,6 +51,7 @@ events:
   year: '1957'
 lat: '35.788336'
 layout: post
+leafleticon: /demostite/assets/leaflet/img/group.svg
 lng: '-78.681077'
 order: 18
 permalink: places/isenhour-tennis-center/

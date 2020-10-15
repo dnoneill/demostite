@@ -169,6 +169,7 @@ events:
   year: '1957'
 lat: '35.783501'
 layout: post
+leafleticon: /demostite/assets/leaflet/img/group.svg
 lng: '-78.669899'
 order: 9
 permalink: places/reynolds-coliseum/

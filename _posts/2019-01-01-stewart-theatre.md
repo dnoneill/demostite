@@ -36,6 +36,7 @@ events:
   year: '2003'
 lat: '35.783961'
 layout: post
+leafleticon: /demostite/assets/leaflet/img/graduate.svg
 lng: '-78.671422'
 order: 11
 permalink: places/stewart-theatre/

@@ -40,6 +40,7 @@ events:
   year: '1958'
 lat: '35.7869'
 layout: post
+leafleticon: /demostite/assets/leaflet/img/graduate.svg
 lng: '-78.672401'
 order: 20
 permalink: places/gardner-hall/

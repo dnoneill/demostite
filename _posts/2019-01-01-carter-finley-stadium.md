@@ -116,6 +116,7 @@ events:
   year: '1967'
 lat: '35.800804'
 layout: post
+leafleticon: /demostite/assets/leaflet/img/group.svg
 lng: '-78.719482'
 order: 16
 permalink: places/carter-finley-stadium/

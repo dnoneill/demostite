@@ -33,6 +33,7 @@ events:
   year: '2006'
 lat: '35.803448'
 layout: post
+leafleticon: /demostite/assets/leaflet/img/group.svg
 lng: '-78.721878'
 order: 17
 permalink: places/rbc-center/

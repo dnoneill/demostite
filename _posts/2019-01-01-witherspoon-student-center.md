@@ -236,6 +236,7 @@ events:
   year: '1992'
 lat: '35.785099'
 layout: post
+leafleticon: /demostite/assets/leaflet/img/graduate.svg
 lng: '-78.6745'
 order: 12
 permalink: places/witherspoon-student-center/

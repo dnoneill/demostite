@@ -48,6 +48,7 @@ events:
   year: '1975'
 lat: '35.783595'
 layout: post
+leafleticon: /demostite/assets/leaflet/img/graduate.svg
 lng: '-78.667499'
 order: 8
 permalink: places/greek-letters/
