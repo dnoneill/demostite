@@ -504,7 +504,7 @@ const mapview = Vue.component('mapview', {
           html: `<img alt="${post.title} icon" class=" ${post.categories}" src="${iconurl}"/>
                 <span class="ordernumber">${order}</span>`,
           className: 'leaflet-marker-icon',
-          iconSize : [46, 50],
+          iconSize : [32, 32],
           popupAnchor : [-1, 5],
         });
         
