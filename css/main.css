@@ -423,11 +423,11 @@ ul {
 
 /* Leaflet */
 .legend {
-	max-height: 24px;
+	height: 24px;
 	padding: 0px;
 	vertical-align: middle;
 	position: relative;
-
+  display: inline-block;
 }
 
 .legend img {
