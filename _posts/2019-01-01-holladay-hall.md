@@ -193,9 +193,197 @@ events:
 lat: '35.7855'
 layout: post
 lng: '-78.664001'
-order: 3
+order: 29
 permalink: places/holladay-hall/
 place: holladay-hall
+route:
+  code: Ok
+  routes:
+  - distance: 92.963
+    duration: 66.467
+    geometry:
+      coordinates:
+      - - -78.663834
+        - 35.785501
+      - - -78.663832
+        - 35.785275
+      - - -78.663833
+        - 35.785157
+      - - -78.663837
+        - 35.78487
+      - - -78.663886
+        - 35.784836
+      - - -78.663933
+        - 35.784808
+      - - -78.663978
+        - 35.784784
+      - - -78.664022
+        - 35.784763
+      - - -78.664044
+        - 35.784757
+      type: LineString
+    legs:
+    - admins:
+      - iso_3166_1: US
+        iso_3166_1_alpha3: USA
+      distance: 92.963
+      duration: 66.467
+      steps:
+      - distance: 70.285
+        driving_side: right
+        duration: 50.496
+        geometry:
+          coordinates:
+          - - -78.663834
+            - 35.785501
+          - - -78.663832
+            - 35.785275
+          - - -78.663833
+            - 35.785157
+          - - -78.663837
+            - 35.78487
+          type: LineString
+        intersections:
+        - admin_index: 0
+          bearings:
+          - 180
+          duration: 26.961
+          entry:
+          - true
+          geometry_index: 0
+          is_urban: true
+          location:
+          - -78.663834
+          - 35.785501
+          mapbox_streets_v8:
+            class: service
+          out: 0
+          weight: 26.961
+        - admin_index: 0
+          bearings:
+          - 0
+          - 181
+          entry:
+          - false
+          - true
+          geometry_index: 2
+          in: 0
+          is_urban: true
+          location:
+          - -78.663833
+          - 35.785157
+          mapbox_streets_v8:
+            class: service
+          out: 1
+          turn_duration: 1
+          turn_weight: 1
+        maneuver:
+          bearing_after: 180
+          bearing_before: 0
+          instruction: Walk south on the walkway.
+          location:
+          - -78.663834
+          - 35.785501
+          type: depart
+        mode: walking
+        name: ''
+        weight: 50.496
+      - distance: 22.678
+        driving_side: right
+        duration: 15.971
+        geometry:
+          coordinates:
+          - - -78.663837
+            - 35.78487
+          - - -78.663886
+            - 35.784836
+          - - -78.663933
+            - 35.784808
+          - - -78.663978
+            - 35.784784
+          - - -78.664022
+            - 35.784763
+          - - -78.664044
+            - 35.784757
+          type: LineString
+        intersections:
+        - admin_index: 0
+          bearings:
+          - 1
+          - 233
+          entry:
+          - false
+          - true
+          geometry_index: 3
+          in: 0
+          is_urban: true
+          location:
+          - -78.663837
+          - 35.78487
+          mapbox_streets_v8:
+            class: service
+          out: 1
+        maneuver:
+          bearing_after: 233
+          bearing_before: 181
+          instruction: Turn right onto the walkway.
+          location:
+          - -78.663837
+          - 35.78487
+          modifier: right
+          type: turn
+        mode: walking
+        name: ''
+        weight: 15.971
+      - distance: 0
+        driving_side: right
+        duration: 0
+        geometry:
+          coordinates:
+          - - -78.664044
+            - 35.784757
+          - - -78.664044
+            - 35.784757
+          type: LineString
+        intersections:
+        - admin_index: 0
+          bearings:
+          - 59
+          entry:
+          - true
+          geometry_index: 8
+          in: 0
+          location:
+          - -78.664044
+          - 35.784757
+        maneuver:
+          bearing_after: 0
+          bearing_before: 239
+          instruction: Your destination is on the right.
+          location:
+          - -78.664044
+          - 35.784757
+          modifier: right
+          type: arrive
+        mode: walking
+        name: ''
+        weight: 0
+      summary: ''
+      weight: 66.467
+    weight: 66.467
+    weight_name: pedestrian
+  uuid: YkqXRMeLax4y1A4hOqiBMUZFnUHdECHrVfH7cYnHUORscNvnYcK-pg==
+  waypoints:
+  - distance: 15.093
+    location:
+    - -78.663834
+    - 35.785501
+    name: ''
+  - distance: 16.805
+    location:
+    - -78.664044
+    - 35.784757
+    name: ''
 title: Holladay Hall
 
 ---
