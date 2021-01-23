@@ -670,7 +670,6 @@ route:
       weight: 941.527
     weight: 941.527
     weight_name: pedestrian
-  uuid: GBaLEI9wkY2ivRDlq6T7w9GjlczsRjad7cZ7rRON-d5dNSVcwajzmw==
   waypoints:
   - distance: 17.029
     location:
