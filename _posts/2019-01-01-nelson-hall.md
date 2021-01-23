@@ -38,7 +38,7 @@ events:
 lat: '35.788399'
 layout: post
 lng: '-78.674004'
-order: 15
+order: 10
 permalink: places/nelson-hall/
 place: nelson-hall
 route:

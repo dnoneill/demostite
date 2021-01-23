@@ -42,7 +42,7 @@ lat: '35.7869'
 layout: post
 leafleticon: /demostite/assets/leaflet/img/graduate.svg
 lng: '-78.672401'
-order: 16
+order: 11
 permalink: places/gardner-hall/
 place: gardner-hall
 route:

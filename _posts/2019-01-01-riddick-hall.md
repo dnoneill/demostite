@@ -34,7 +34,7 @@ events:
 lat: '35.785'
 layout: post
 lng: '-78.668297'
-order: 23
+order: 28
 permalink: places/riddick-hall/
 place: riddick-hall
 route:

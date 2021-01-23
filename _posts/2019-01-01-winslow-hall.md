@@ -93,91 +93,64 @@ events:
 lat: '35.784901'
 layout: post
 lng: '-78.664101'
-order: 30
+order: 22
 permalink: places/winslow-hall/
 place: winslow-hall
 route:
   code: Ok
   routes:
-  - distance: 90.57
-    duration: 65.782
+  - distance: 92.963
+    duration: 66.467
     geometry:
       coordinates:
       - - -78.664044
         - 35.784757
-      - - -78.664049
-        - 35.784756
-      - - -78.664074
-        - 35.784747
-      - - -78.664115
-        - 35.784735
-      - - -78.664157
-        - 35.784728
-      - - -78.664198
-        - 35.784729
-      - - -78.66424
-        - 35.784743
-      - - -78.664293
-        - 35.784775
-      - - -78.664333
-        - 35.784747
-      - - -78.66436
-        - 35.78473
-      - - -78.664396
-        - 35.784705
-      - - -78.664432
-        - 35.78468
-      - - -78.664413
-        - 35.78464
-      - - -78.664399
-        - 35.784604
-      - - -78.6644
-        - 35.78457
-      - - -78.664415
-        - 35.784539
-      - - -78.664451
-        - 35.784497
-      - - -78.664585
-        - 35.784382
-      - - -78.664611
-        - 35.784364
-      - - -78.664664
-        - 35.784319
+      - - -78.664022
+        - 35.784763
+      - - -78.663978
+        - 35.784784
+      - - -78.663933
+        - 35.784808
+      - - -78.663886
+        - 35.784836
+      - - -78.663837
+        - 35.78487
+      - - -78.663833
+        - 35.785157
+      - - -78.663832
+        - 35.785275
+      - - -78.663834
+        - 35.785501
       type: LineString
     legs:
     - admins:
       - iso_3166_1: US
         iso_3166_1_alpha3: USA
-      distance: 90.57
-      duration: 65.782
+      distance: 92.963
+      duration: 66.467
       steps:
-      - distance: 25.322
+      - distance: 22.678
         driving_side: right
-        duration: 17.832
+        duration: 15.971
         geometry:
           coordinates:
           - - -78.664044
             - 35.784757
-          - - -78.664049
-            - 35.784756
-          - - -78.664074
-            - 35.784747
-          - - -78.664115
-            - 35.784735
-          - - -78.664157
-            - 35.784728
-          - - -78.664198
-            - 35.784729
-          - - -78.66424
-            - 35.784743
-          - - -78.664293
-            - 35.784775
+          - - -78.664022
+            - 35.784763
+          - - -78.663978
+            - 35.784784
+          - - -78.663933
+            - 35.784808
+          - - -78.663886
+            - 35.784836
+          - - -78.663837
+            - 35.78487
           type: LineString
         intersections:
         - admin_index: 0
           bearings:
-          - 247
-          duration: 2.339
+          - 59
           entry:
           - true
           geometry_index: 0
@@ -188,226 +161,116 @@ route:
           mapbox_streets_v8:
             class: service
           out: 0
-          weight: 2.339
-        - admin_index: 0
-          bearings:
-          - 67
-          - 254
-          entry:
-          - false
-          - true
-          geometry_index: 2
-          in: 0
-          is_urban: true
-          location:
-          - -78.664074
-          - 35.784747
-          mapbox_streets_v8:
-            class: service
-          out: 1
         maneuver:
-          bearing_after: 247
+          bearing_after: 59
           bearing_before: 0
-          instruction: Walk west on the walkway.
+          instruction: Walk northeast on the walkway.
           location:
           - -78.664044
           - 35.784757
           type: depart
         mode: walking
         name: ''
-        weight: 17.832
-      - distance: 16
+        weight: 15.971
+      - distance: 70.285
         driving_side: right
-        duration: 13.268
+        duration: 50.496
         geometry:
           coordinates:
-          - - -78.664293
-            - 35.784775
-          - - -78.664333
-            - 35.784747
-          - - -78.66436
-            - 35.78473
-          - - -78.664396
-            - 35.784705
-          - - -78.664432
-            - 35.78468
+          - - -78.663837
+            - 35.78487
+          - - -78.663833
+            - 35.785157
+          - - -78.663832
+            - 35.785275
+          - - -78.663834
+            - 35.785501
           type: LineString
         intersections:
         - admin_index: 0
           bearings:
-          - 124
-          - 229
-          duration: 3.521
+          - 1
+          - 233
+          duration: 22.535
           entry:
-          - false
           - true
-          geometry_index: 7
-          in: 0
+          - false
+          geometry_index: 5
+          in: 1
           is_urban: true
           location:
-          - -78.664293
-          - 35.784775
+          - -78.663837
+          - 35.78487
           mapbox_streets_v8:
             class: service
-          out: 1
-          weight: 3.521
+          out: 0
+          weight: 22.535
         - admin_index: 0
           bearings:
-          - 49
-          - 231
-          duration: 5.93
+          - 0
+          - 181
           entry:
-          - false
           - true
-          geometry_index: 8
-          in: 0
+          - false
+          geometry_index: 6
+          in: 1
           is_urban: true
           location:
-          - -78.664333
-          - 35.784747
+          - -78.663833
+          - 35.785157
           mapbox_streets_v8:
             class: service
-          out: 1
-          turn_duration: 1
-          turn_weight: 1
-          weight: 5.93
-        - admin_index: 0
-          bearings:
-          - 51
-          - 229
-          entry:
-          - false
-          - true
-          geometry_index: 10
-          in: 0
-          is_urban: true
-          location:
-          - -78.664396
-          - 35.784705
-          mapbox_streets_v8:
-            class: service
-          out: 1
+          out: 0
           turn_duration: 1
           turn_weight: 1
         maneuver:
-          bearing_after: 229
-          bearing_before: 304
+          bearing_after: 1
+          bearing_before: 53
           instruction: Turn left onto the walkway.
           location:
-          - -78.664293
-          - 35.784775
+          - -78.663837
+          - 35.78487
           modifier: left
           type: turn
         mode: walking
         name: ''
-        weight: 13.268
-      - distance: 49.248
-        driving_side: right
-        duration: 34.682
-        geometry:
-          coordinates:
-          - - -78.664432
-            - 35.78468
-          - - -78.664413
-            - 35.78464
-          - - -78.664399
-            - 35.784604
-          - - -78.6644
-            - 35.78457
-          - - -78.664415
-            - 35.784539
-          - - -78.664451
-            - 35.784497
-          - - -78.664585
-            - 35.784382
-          - - -78.664611
-            - 35.784364
-          - - -78.664664
-            - 35.784319
-          type: LineString
-        intersections:
-        - admin_index: 0
-          bearings:
-          - 49
-          - 172
-          duration: 15.493
-          entry:
-          - false
-          - true
-          geometry_index: 11
-          in: 0
-          is_urban: true
-          location:
-          - -78.664432
-          - 35.78468
-          mapbox_streets_v8:
-            class: service
-          out: 1
-          weight: 15.493
-        - admin_index: 0
-          bearings:
-          - 17
-          - 223
-          entry:
-          - false
-          - true
-          geometry_index: 16
-          in: 0
-          is_urban: true
-          location:
-          - -78.664451
-          - 35.784497
-          mapbox_streets_v8:
-            class: service
-          out: 1
-        maneuver:
-          bearing_after: 172
-          bearing_before: 229
-          instruction: Turn left onto the walkway.
-          location:
-          - -78.664432
-          - 35.78468
-          modifier: left
-          type: turn
-        mode: walking
-        name: ''
-        weight: 34.682
+        weight: 50.496
       - distance: 0
         driving_side: right
         duration: 0
         geometry:
           coordinates:
-          - - -78.664664
-            - 35.784319
-          - - -78.664664
-            - 35.784319
+          - - -78.663834
+            - 35.785501
+          - - -78.663834
+            - 35.785501
           type: LineString
         intersections:
         - admin_index: 0
           bearings:
-          - 45
+          - 180
           entry:
           - true
-          geometry_index: 19
+          geometry_index: 8
           in: 0
           location:
-          - -78.664664
-          - 35.784319
+          - -78.663834
+          - 35.785501
         maneuver:
           bearing_after: 0
-          bearing_before: 225
-          instruction: Your destination is on the right.
+          bearing_before: 360
+          instruction: Your destination is on the left.
           location:
-          - -78.664664
-          - 35.784319
-          modifier: right
+          - -78.663834
+          - 35.785501
+          modifier: left
           type: arrive
         mode: walking
         name: ''
         weight: 0
       summary: ''
-      weight: 65.782
-    weight: 65.782
+      weight: 66.467
+    weight: 66.467
     weight_name: pedestrian
   waypoints:
   - distance: 16.805
@@ -415,10 +278,10 @@ route:
     - -78.664044
     - 35.784757
     name: ''
-  - distance: 29.46
+  - distance: 15.093
     location:
-    - -78.664664
-    - 35.784319
+    - -78.663834
+    - 35.785501
     name: ''
 title: Winslow Hall
 

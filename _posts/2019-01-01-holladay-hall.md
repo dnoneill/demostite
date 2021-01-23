@@ -193,61 +193,99 @@ events:
 lat: '35.7855'
 layout: post
 lng: '-78.664001'
-order: 29
+order: 23
 permalink: places/holladay-hall/
 place: holladay-hall
 route:
   code: Ok
   routes:
-  - distance: 92.963
-    duration: 66.467
+  - distance: 275.715
+    duration: 196.166
     geometry:
       coordinates:
       - - -78.663834
         - 35.785501
-      - - -78.663832
-        - 35.785275
-      - - -78.663833
-        - 35.785157
-      - - -78.663837
-        - 35.78487
-      - - -78.663886
-        - 35.784836
-      - - -78.663933
-        - 35.784808
-      - - -78.663978
-        - 35.784784
-      - - -78.664022
-        - 35.784763
-      - - -78.664044
-        - 35.784757
+      - - -78.663836
+        - 35.785759
+      - - -78.663782
+        - 35.78579
+      - - -78.663784
+        - 35.785802
+      - - -78.663778
+        - 35.785813
+      - - -78.663755
+        - 35.785835
+      - - -78.663729
+        - 35.785852
+      - - -78.6637
+        - 35.785864
+      - - -78.663654
+        - 35.785876
+      - - -78.663691
+        - 35.785925
+      - - -78.663814
+        - 35.786028
+      - - -78.663885
+        - 35.786071
+      - - -78.663981
+        - 35.786117
+      - - -78.664206
+        - 35.786178
+      - - -78.66493
+        - 35.78637
+      - - -78.665018
+        - 35.786353
+      - - -78.665039
+        - 35.786322
+      - - -78.665078
+        - 35.786227
+      - - -78.665105
+        - 35.786161
+      - - -78.665149
+        - 35.785916
+      - - -78.665098
+        - 35.785912
+      - - -78.664938
+        - 35.785786
+      - - -78.664852
+        - 35.785713
       type: LineString
     legs:
     - admins:
       - iso_3166_1: US
         iso_3166_1_alpha3: USA
-      distance: 92.963
-      duration: 66.467
+      distance: 275.715
+      duration: 196.166
       steps:
-      - distance: 70.285
+      - distance: 50.715
         driving_side: right
-        duration: 50.496
+        duration: 36.715
         geometry:
           coordinates:
           - - -78.663834
             - 35.785501
-          - - -78.663832
-            - 35.785275
-          - - -78.663833
-            - 35.785157
-          - - -78.663837
-            - 35.78487
+          - - -78.663836
+            - 35.785759
+          - - -78.663782
+            - 35.78579
+          - - -78.663784
+            - 35.785802
+          - - -78.663778
+            - 35.785813
+          - - -78.663755
+            - 35.785835
+          - - -78.663729
+            - 35.785852
+          - - -78.6637
+            - 35.785864
+          - - -78.663654
+            - 35.785876
           type: LineString
         intersections:
         - admin_index: 0
           bearings:
-          - 180
-          duration: 26.961
+          - 360
+          duration: 24.447
           entry:
           - true
           geometry_index: 0
@@ -258,119 +296,286 @@ route:
           mapbox_streets_v8:
             class: service
           out: 0
-          weight: 26.961
+          weight: 24.447
         - admin_index: 0
           bearings:
-          - 0
-          - 181
+          - 42
+          - 224
+          duration: 8.451
           entry:
-          - false
           - true
+          - false
           geometry_index: 2
-          in: 0
+          in: 1
           is_urban: true
           location:
-          - -78.663833
-          - 35.785157
+          - -78.663782
+          - 35.78579
           mapbox_streets_v8:
             class: service
-          out: 1
+          out: 0
+          weight: 8.451
+        - admin_index: 0
+          bearings:
+          - 72
+          - 222
+          entry:
+          - true
+          - false
+          geometry_index: 7
+          in: 1
+          is_urban: true
+          location:
+          - -78.6637
+          - 35.785864
+          mapbox_streets_v8:
+            class: service
+          out: 0
           turn_duration: 1
           turn_weight: 1
         maneuver:
-          bearing_after: 180
+          bearing_after: 360
           bearing_before: 0
-          instruction: Walk south on the walkway.
+          instruction: Walk north on the walkway.
           location:
           - -78.663834
           - 35.785501
           type: depart
         mode: walking
         name: ''
-        weight: 50.496
-      - distance: 22.678
+        weight: 36.715
+      - distance: 139
         driving_side: right
-        duration: 15.971
+        duration: 97.887
         geometry:
           coordinates:
-          - - -78.663837
-            - 35.78487
-          - - -78.663886
-            - 35.784836
-          - - -78.663933
-            - 35.784808
-          - - -78.663978
-            - 35.784784
-          - - -78.664022
-            - 35.784763
-          - - -78.664044
-            - 35.784757
+          - - -78.663654
+            - 35.785876
+          - - -78.663691
+            - 35.785925
+          - - -78.663814
+            - 35.786028
+          - - -78.663885
+            - 35.786071
+          - - -78.663981
+            - 35.786117
+          - - -78.664206
+            - 35.786178
+          - - -78.66493
+            - 35.78637
+          - - -78.665018
+            - 35.786353
           type: LineString
         intersections:
         - admin_index: 0
           bearings:
-          - 1
-          - 233
+          - 252
+          - 321
+          duration: 43.662
           entry:
           - false
           - true
-          geometry_index: 3
+          geometry_index: 8
           in: 0
           is_urban: true
           location:
-          - -78.663837
-          - 35.78487
+          - -78.663654
+          - 35.785876
+          mapbox_streets_v8:
+            class: street
+          out: 1
+          turn_weight: 5
+          weight: 48.662
+        - admin_index: 0
+          bearings:
+          - 108
+          - 288
+          entry:
+          - false
+          - true
+          geometry_index: 13
+          in: 0
+          is_urban: true
+          location:
+          - -78.664206
+          - 35.786178
+          mapbox_streets_v8:
+            class: street
+          out: 1
+        maneuver:
+          bearing_after: 321
+          bearing_before: 72
+          instruction: Turn left onto Founders Drive.
+          location:
+          - -78.663654
+          - 35.785876
+          modifier: left
+          type: turn
+        mode: walking
+        name: Founders Drive
+        weight: 102.887
+      - distance: 50
+        driving_side: right
+        duration: 35.211
+        geometry:
+          coordinates:
+          - - -78.665018
+            - 35.786353
+          - - -78.665039
+            - 35.786322
+          - - -78.665078
+            - 35.786227
+          - - -78.665105
+            - 35.786161
+          - - -78.665149
+            - 35.785916
+          type: LineString
+        intersections:
+        - admin_index: 0
+          bearings:
+          - 91
+          - 201
+          duration: 10.563
+          entry:
+          - false
+          - true
+          geometry_index: 15
+          in: 0
+          is_urban: true
+          location:
+          - -78.665018
+          - 35.786353
+          mapbox_streets_v8:
+            class: street
+          out: 1
+          weight: 10.563
+        - admin_index: 0
+          bearings:
+          - 21
+          - 193
+          entry:
+          - false
+          - true
+          geometry_index: 17
+          in: 0
+          is_urban: true
+          location:
+          - -78.665078
+          - 35.786227
+          mapbox_streets_v8:
+            class: street
+          out: 1
+        maneuver:
+          bearing_after: 201
+          bearing_before: 271
+          instruction: Turn left to stay on Founders Drive.
+          location:
+          - -78.665018
+          - 35.786353
+          modifier: left
+          type: end of road
+        mode: walking
+        name: Founders Drive
+        weight: 35.211
+      - distance: 36
+        driving_side: right
+        duration: 26.352
+        geometry:
+          coordinates:
+          - - -78.665149
+            - 35.785916
+          - - -78.665098
+            - 35.785912
+          - - -78.664938
+            - 35.785786
+          - - -78.664852
+            - 35.785713
+          type: LineString
+        intersections:
+        - admin_index: 0
+          bearings:
+          - 8
+          - 110
+          duration: 17.606
+          entry:
+          - false
+          - true
+          geometry_index: 19
+          in: 0
+          is_urban: true
+          location:
+          - -78.665149
+          - 35.785916
           mapbox_streets_v8:
             class: service
           out: 1
-        maneuver:
-          bearing_after: 233
-          bearing_before: 181
-          instruction: Turn right onto the walkway.
+          turn_weight: 5
+          weight: 22.606
+        - admin_index: 0
+          bearings:
+          - 136
+          - 314
+          entry:
+          - true
+          - false
+          geometry_index: 21
+          in: 1
+          is_urban: true
           location:
-          - -78.663837
-          - 35.78487
-          modifier: right
+          - -78.664938
+          - 35.785786
+          mapbox_streets_v8:
+            class: service
+          out: 0
+          turn_duration: 1
+          turn_weight: 1
+        maneuver:
+          bearing_after: 110
+          bearing_before: 188
+          instruction: Turn left onto the walkway.
+          location:
+          - -78.665149
+          - 35.785916
+          modifier: left
           type: turn
         mode: walking
         name: ''
-        weight: 15.971
+        weight: 31.352
       - distance: 0
         driving_side: right
         duration: 0
         geometry:
           coordinates:
-          - - -78.664044
-            - 35.784757
-          - - -78.664044
-            - 35.784757
+          - - -78.664852
+            - 35.785713
+          - - -78.664852
+            - 35.785713
           type: LineString
         intersections:
         - admin_index: 0
           bearings:
-          - 59
+          - 316
           entry:
           - true
-          geometry_index: 8
+          geometry_index: 22
           in: 0
           location:
-          - -78.664044
-          - 35.784757
+          - -78.664852
+          - 35.785713
         maneuver:
           bearing_after: 0
-          bearing_before: 239
-          instruction: Your destination is on the right.
+          bearing_before: 136
+          instruction: You have arrived at your destination.
           location:
-          - -78.664044
-          - 35.784757
-          modifier: right
+          - -78.664852
+          - 35.785713
           type: arrive
         mode: walking
         name: ''
         weight: 0
-      summary: ''
-      weight: 66.467
-    weight: 66.467
+      summary: Founders Drive
+      weight: 206.166
+    weight: 206.166
     weight_name: pedestrian
   waypoints:
   - distance: 15.093
@@ -378,10 +583,10 @@ route:
     - -78.663834
     - 35.785501
     name: ''
-  - distance: 16.805
+  - distance: 4.996
     location:
-    - -78.664044
-    - 35.784757
+    - -78.664852
+    - 35.785713
     name: ''
 title: Holladay Hall
 

@@ -161,79 +161,97 @@ lat: '35.783798'
 layout: post
 leafleticon: /demostite/assets/leaflet/img/graduate.svg
 lng: '-78.671097'
-order: 10
+order: 16
 permalink: places/talley-student-center/
 place: talley-student-center
 route:
   code: Ok
   routes:
-  - distance: 195.241
-    duration: 138.493
+  - distance: 403.301
+    duration: 287.015
     geometry:
       coordinates:
       - - -78.671246
         - 35.783552
-      - - -78.671377
-        - 35.783604
-      - - -78.671514
-        - 35.783658
-      - - -78.671698
-        - 35.783727
-      - - -78.67202
-        - 35.783836
-      - - -78.672086
-        - 35.783858
-      - - -78.672151
-        - 35.783875
-      - - -78.672371
-        - 35.783947
-      - - -78.672316
-        - 35.784033
-      - - -78.67206
-        - 35.783941
-      - - -78.671987
-        - 35.783927
-      - - -78.67186
-        - 35.783909
-      - - -78.671635
-        - 35.783825
-      - - -78.671598
-        - 35.783878
+      - - -78.671189
+        - 35.783529
+      - - -78.671074
+        - 35.783459
+      - - -78.670986
+        - 35.783366
+      - - -78.67091
+        - 35.783245
+      - - -78.670868
+        - 35.783097
+      - - -78.670854
+        - 35.782994
+      - - -78.670687
+        - 35.782915
+      - - -78.670638
+        - 35.782897
+      - - -78.670226
+        - 35.782752
+      - - -78.669381
+        - 35.782433
+      - - -78.669285
+        - 35.782419
+      - - -78.669253
+        - 35.782419
+      - - -78.669224
+        - 35.782422
+      - - -78.6692
+        - 35.782432
+      - - -78.669177
+        - 35.782445
+      - - -78.669155
+        - 35.782466
+      - - -78.66914
+        - 35.782479
+      - - -78.669003
+        - 35.782735
+      - - -78.66898
+        - 35.782776
+      - - -78.668882
+        - 35.782955
+      - - -78.66877
+        - 35.783157
+      - - -78.669463
+        - 35.783403
+      - - -78.669493
+        - 35.78335
       type: LineString
     legs:
     - admins:
       - iso_3166_1: US
         iso_3166_1_alpha3: USA
-      distance: 195.241
-      duration: 138.493
+      distance: 403.301
+      duration: 287.015
       steps:
-      - distance: 111.241
+      - distance: 75.759
         driving_side: right
-        duration: 78.339
+        duration: 54.352
         geometry:
           coordinates:
           - - -78.671246
             - 35.783552
-          - - -78.671377
-            - 35.783604
-          - - -78.671514
-            - 35.783658
-          - - -78.671698
-            - 35.783727
-          - - -78.67202
-            - 35.783836
-          - - -78.672086
-            - 35.783858
-          - - -78.672151
-            - 35.783875
-          - - -78.672371
-            - 35.783947
+          - - -78.671189
+            - 35.783529
+          - - -78.671074
+            - 35.783459
+          - - -78.670986
+            - 35.783366
+          - - -78.67091
+            - 35.783245
+          - - -78.670868
+            - 35.783097
+          - - -78.670854
+            - 35.782994
           type: LineString
         intersections:
         - admin_index: 0
           bearings:
-          - 296
-          duration: 58.62
+          - 116
+          duration: 4.056
           entry:
           - true
           geometry_index: 0
@@ -244,49 +262,96 @@ route:
           mapbox_streets_v8:
             class: tertiary
           out: 0
-          weight: 58.62
+          weight: 4.056
         - admin_index: 0
           bearings:
-          - 113
-          - 291
+          - 133
+          - 296
+          duration: 40.845
           entry:
-          - false
           - true
-          geometry_index: 5
-          in: 0
+          - false
+          geometry_index: 1
+          in: 1
           is_urban: true
           location:
-          - -78.672086
-          - 35.783858
+          - -78.671189
+          - 35.783529
           mapbox_streets_v8:
             class: tertiary
-          out: 1
+          out: 0
+          weight: 40.845
+        - admin_index: 0
+          bearings:
+          - 174
+          - 344
+          entry:
+          - true
+          - false
+          geometry_index: 5
+          in: 1
+          is_urban: true
+          location:
+          - -78.670868
+          - 35.783097
+          mapbox_streets_v8:
+            class: tertiary
+          out: 0
+          turn_duration: 1
+          turn_weight: 1
         maneuver:
-          bearing_after: 296
+          bearing_after: 116
           bearing_before: 0
-          instruction: Walk northwest on Cates Avenue.
+          instruction: Walk southeast on Cates Avenue.
           location:
           - -78.671246
           - 35.783552
           type: depart
         mode: walking
         name: Cates Avenue
-        weight: 78.339
-      - distance: 11
+        weight: 54.352
+      - distance: 146
         driving_side: right
-        duration: 7.746
+        duration: 104.817
         geometry:
           coordinates:
-          - - -78.672371
-            - 35.783947
-          - - -78.672316
-            - 35.784033
+          - - -78.670854
+            - 35.782994
+          - - -78.670687
+            - 35.782915
+          - - -78.670638
+            - 35.782897
+          - - -78.670226
+            - 35.782752
+          - - -78.669381
+            - 35.782433
           type: LineString
         intersections:
         - admin_index: 0
           bearings:
-          - 27
-          - 112
+          - 120
+          - 354
+          duration: 12.972
+          entry:
+          - true
+          - false
+          geometry_index: 6
+          in: 1
+          is_urban: true
+          location:
+          - -78.670854
+          - 35.782994
+          mapbox_streets_v8:
+            class: tertiary
+          out: 0
+          turn_duration: 1
+          turn_weight: 1
+          weight: 12.972
+        - admin_index: 0
+          bearings:
+          - 114
+          - 300
+          duration: 32.69
           entry:
           - true
           - false
@@ -294,65 +359,18 @@ route:
           in: 1
           is_urban: true
           location:
-          - -78.672371
-          - 35.783947
+          - -78.670687
+          - 35.782915
           mapbox_streets_v8:
-            class: service
+            class: tertiary
           out: 0
-          turn_weight: 5
-        maneuver:
-          bearing_after: 27
-          bearing_before: 292
-          instruction: Turn right onto the walkway.
-          location:
-          - -78.672371
-          - 35.783947
-          modifier: right
-          type: turn
-        mode: walking
-        name: ''
-        weight: 12.746
-      - distance: 73
-        driving_side: right
-        duration: 52.408
-        geometry:
-          coordinates:
-          - - -78.672316
-            - 35.784033
-          - - -78.67206
-            - 35.783941
-          - - -78.671987
-            - 35.783927
-          - - -78.67186
-            - 35.783909
-          - - -78.671635
-            - 35.783825
-          - - -78.671598
-            - 35.783878
-          type: LineString
-        intersections:
+          turn_duration: 1
+          turn_weight: 1
+          weight: 32.69
         - admin_index: 0
           bearings:
-          - 114
-          - 207
-          duration: 17.606
-          entry:
-          - true
-          - false
-          geometry_index: 8
-          in: 1
-          is_urban: true
-          location:
-          - -78.672316
-          - 35.784033
-          mapbox_streets_v8:
-            class: service
-          out: 0
-          weight: 17.606
-        - admin_index: 0
-          bearings:
-          - 103
-          - 294
+          - 115
+          - 293
           entry:
           - true
           - false
@@ -360,60 +378,274 @@ route:
           in: 1
           is_urban: true
           location:
-          - -78.67206
-          - 35.783941
+          - -78.670226
+          - 35.782752
+          mapbox_streets_v8:
+            class: tertiary
+          out: 0
+        maneuver:
+          bearing_after: 120
+          bearing_before: 174
+          instruction: Turn left to stay on Cates Avenue.
+          location:
+          - -78.670854
+          - 35.782994
+          modifier: left
+          type: continue
+        mode: walking
+        name: Cates Avenue
+        weight: 104.817
+      - distance: 107
+        driving_side: right
+        duration: 75.352
+        geometry:
+          coordinates:
+          - - -78.669381
+            - 35.782433
+          - - -78.669285
+            - 35.782419
+          - - -78.669253
+            - 35.782419
+          - - -78.669224
+            - 35.782422
+          - - -78.6692
+            - 35.782432
+          - - -78.669177
+            - 35.782445
+          - - -78.669155
+            - 35.782466
+          - - -78.66914
+            - 35.782479
+          - - -78.669003
+            - 35.782735
+          - - -78.66898
+            - 35.782776
+          - - -78.668882
+            - 35.782955
+          - - -78.66877
+            - 35.783157
+          type: LineString
+        intersections:
+        - admin_index: 0
+          bearings:
+          - 82
+          - 295
+          duration: 15.493
+          entry:
+          - true
+          - false
+          geometry_index: 10
+          in: 1
+          is_urban: true
+          location:
+          - -78.669381
+          - 35.782433
+          mapbox_streets_v8:
+            class: tertiary_link
+          out: 0
+          weight: 15.493
+        - admin_index: 0
+          bearings:
+          - 78
+          - 258
+          duration: 1.408
+          entry:
+          - true
+          - false
+          geometry_index: 16
+          in: 1
+          is_urban: true
+          location:
+          - -78.669155
+          - 35.782466
+          mapbox_streets_v8:
+            class: tertiary_link
+          out: 0
+          weight: 1.408
+        - admin_index: 0
+          bearings:
+          - 23
+          - 203
+          duration: 25.352
+          entry:
+          - true
+          - false
+          geometry_index: 17
+          in: 1
+          is_urban: true
+          location:
+          - -78.66914
+          - 35.782479
+          mapbox_streets_v8:
+            class: tertiary
+          out: 0
+          turn_weight: 5
+          weight: 30.352
+        - admin_index: 0
+          bearings:
+          - 24
+          - 204
+          duration: 15.493
+          entry:
+          - true
+          - false
+          geometry_index: 19
+          in: 1
+          is_urban: true
+          location:
+          - -78.66898
+          - 35.782776
+          mapbox_streets_v8:
+            class: tertiary
+          out: 0
+          weight: 15.493
+        - admin_index: 0
+          bearings:
+          - 24
+          - 204
+          entry:
+          - true
+          - false
+          geometry_index: 20
+          in: 1
+          is_urban: true
+          location:
+          - -78.668882
+          - 35.782955
+          mapbox_streets_v8:
+            class: tertiary
+          out: 0
+        maneuver:
+          bearing_after: 23
+          bearing_before: 115
+          instruction: Turn left onto Jeter Drive.
+          location:
+          - -78.669381
+          - 35.782433
+          modifier: left
+          type: turn
+        mode: walking
+        name: Jeter Drive
+        weight: 80.352
+      - distance: 68
+        driving_side: right
+        duration: 47.887
+        geometry:
+          coordinates:
+          - - -78.66877
+            - 35.783157
+          - - -78.669463
+            - 35.783403
+          type: LineString
+        intersections:
+        - admin_index: 0
+          bearings:
+          - 204
+          - 294
+          classes:
+          - restricted
+          entry:
+          - false
+          - true
+          geometry_index: 21
+          in: 0
+          is_urban: true
+          location:
+          - -78.66877
+          - 35.783157
           mapbox_streets_v8:
             class: service
-          out: 0
-          turn_duration: 1
-          turn_weight: 1
+          out: 1
+          turn_weight: 605
         maneuver:
-          bearing_after: 114
-          bearing_before: 27
-          instruction: Turn right onto the walkway.
+          bearing_after: 294
+          bearing_before: 24
+          instruction: Turn left.
           location:
-          - -78.672316
-          - 35.784033
-          modifier: right
+          - -78.66877
+          - 35.783157
+          modifier: left
           type: turn
         mode: walking
         name: ''
-        weight: 52.408
+        weight: 652.887
+      - distance: 6.542
+        driving_side: right
+        duration: 4.607
+        geometry:
+          coordinates:
+          - - -78.669463
+            - 35.783403
+          - - -78.669493
+            - 35.78335
+          type: LineString
+        intersections:
+        - admin_index: 0
+          bearings:
+          - 114
+          - 205
+          classes:
+          - restricted
+          entry:
+          - false
+          - true
+          geometry_index: 22
+          in: 0
+          is_urban: true
+          location:
+          - -78.669463
+          - 35.783403
+          mapbox_streets_v8:
+            class: service
+          out: 1
+        maneuver:
+          bearing_after: 205
+          bearing_before: 294
+          instruction: Turn left.
+          location:
+          - -78.669463
+          - 35.783403
+          modifier: left
+          type: turn
+        mode: walking
+        name: ''
+        weight: 23.036
       - distance: 0
         driving_side: right
         duration: 0
         geometry:
           coordinates:
-          - - -78.671598
-            - 35.783878
-          - - -78.671598
-            - 35.783878
+          - - -78.669493
+            - 35.78335
+          - - -78.669493
+            - 35.78335
           type: LineString
         intersections:
         - admin_index: 0
           bearings:
-          - 216
+          - 25
           entry:
           - true
-          geometry_index: 13
+          geometry_index: 23
           in: 0
           location:
-          - -78.671598
-          - 35.783878
+          - -78.669493
+          - 35.78335
         maneuver:
           bearing_after: 0
-          bearing_before: 36
-          instruction: You have arrived at your destination.
+          bearing_before: 205
+          instruction: Your destination is on the right.
           location:
-          - -78.671598
-          - 35.783878
+          - -78.669493
+          - 35.78335
+          modifier: right
           type: arrive
         mode: walking
         name: ''
         weight: 0
-      summary: Cates Avenue
-      weight: 143.493
-    weight: 143.493
+      summary: Cates Avenue, Jeter Drive
+      weight: 915.444
+    weight: 915.444
     weight_name: pedestrian
   waypoints:
   - distance: 30.538
@@ -421,10 +653,10 @@ route:
     - -78.671246
     - 35.783552
     name: Cates Avenue
-  - distance: 18.384
+  - distance: 40.33
     location:
-    - -78.671598
-    - 35.783878
+    - -78.669493
+    - 35.78335
     name: ''
 title: Talley Student Center
 

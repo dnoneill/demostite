@@ -29,70 +29,79 @@ events:
 lat: '35.7854'
 layout: post
 lng: '-78.665604'
-order: 27
+order: 25
 permalink: places/leazar-hall/
 place: leazar-hall
 route:
   code: Ok
   routes:
-  - distance: 132.096
-    duration: 94.025
+  - distance: 78.085
+    duration: 54.99
     geometry:
       coordinates:
       - - -78.665652
         - 35.785169
-      - - -78.665608
-        - 35.785163
-      - - -78.665566
-        - 35.78515
-      - - -78.665236
-        - 35.785048
-      - - -78.665203
-        - 35.785041
-      - - -78.665205
-        - 35.785079
-      - - -78.665202
-        - 35.785253
-      - - -78.665168
-        - 35.785431
-      - - -78.66517
-        - 35.785469
-      - - -78.665122
-        - 35.78547
-      - - -78.665036
-        - 35.785556
-      - - -78.665002
-        - 35.785585
-      - - -78.664852
-        - 35.785713
+      - - -78.665695
+        - 35.785175
+      - - -78.665798
+        - 35.785183
+      - - -78.665869
+        - 35.785191
+      - - -78.665919
+        - 35.785212
+      - - -78.666002
+        - 35.78524
+      - - -78.666056
+        - 35.78526
+      - - -78.666221
+        - 35.785316
+      - - -78.666351
+        - 35.785359
+      - - -78.666458
+        - 35.785396
+      - - -78.666458
+        - 35.785396
       type: LineString
     legs:
     - admins:
       - iso_3166_1: US
         iso_3166_1_alpha3: USA
-      distance: 132.096
-      duration: 94.025
+      distance: 78.085
+      duration: 54.99
       steps:
-      - distance: 43.096
+      - distance: 78.085
         driving_side: right
-        duration: 30.349
+        duration: 54.99
         geometry:
           coordinates:
           - - -78.665652
             - 35.785169
-          - - -78.665608
-            - 35.785163
-          - - -78.665566
-            - 35.78515
-          - - -78.665236
-            - 35.785048
-          - - -78.665203
-            - 35.785041
+          - - -78.665695
+            - 35.785175
+          - - -78.665798
+            - 35.785183
+          - - -78.665869
+            - 35.785191
+          - - -78.665919
+            - 35.785212
+          - - -78.666002
+            - 35.78524
+          - - -78.666056
+            - 35.78526
+          - - -78.666221
+            - 35.785316
+          - - -78.666351
+            - 35.785359
+          - - -78.666458
+            - 35.785396
+          - - -78.666458
+            - 35.785396
           type: LineString
         intersections:
         - admin_index: 0
           bearings:
-          - 105
+          - 278
+          duration: 38.665
           entry:
           - true
           geometry_index: 0
@@ -103,56 +112,11 @@ route:
           mapbox_streets_v8:
             class: service
           out: 0
-        maneuver:
-          bearing_after: 105
-          bearing_before: 0
-          instruction: Walk east on the walkway.
-          location:
-          - -78.665652
-          - 35.785169
-          type: depart
-        mode: walking
-        name: ''
-        weight: 30.349
-      - distance: 48
-        driving_side: right
-        duration: 33.803
-        geometry:
-          coordinates:
-          - - -78.665203
-            - 35.785041
-          - - -78.665205
-            - 35.785079
-          - - -78.665202
-            - 35.785253
-          - - -78.665168
-            - 35.785431
-          - - -78.66517
-            - 35.785469
-          type: LineString
-        intersections:
+          weight: 38.665
         - admin_index: 0
           bearings:
-          - 288
-          - 359
-          duration: 30.986
-          entry:
-          - false
-          - true
-          geometry_index: 4
-          in: 0
-          is_urban: true
-          location:
-          - -78.665203
-          - 35.785041
-          mapbox_streets_v8:
-            class: service
-          out: 1
-          weight: 30.986
-        - admin_index: 0
-          bearings:
-          - 189
-          - 358
+          - 113
+          - 292
           entry:
           - false
           - true
@@ -160,160 +124,58 @@ route:
           in: 0
           is_urban: true
           location:
-          - -78.665168
-          - 35.785431
+          - -78.666221
+          - 35.785316
           mapbox_streets_v8:
             class: service
           out: 1
         maneuver:
-          bearing_after: 359
-          bearing_before: 108
-          instruction: Turn left onto the walkway.
+          bearing_after: 278
+          bearing_before: 0
+          instruction: Walk west on the walkway.
           location:
-          - -78.665203
-          - 35.785041
-          modifier: left
-          type: turn
+          - -78.665652
+          - 35.785169
+          type: depart
         mode: walking
         name: ''
-        weight: 33.803
-      - distance: 21
-        driving_side: right
-        duration: 15.789
-        geometry:
-          coordinates:
-          - - -78.66517
-            - 35.785469
-          - - -78.665122
-            - 35.78547
-          - - -78.665036
-            - 35.785556
-          - - -78.665002
-            - 35.785585
-          type: LineString
-        intersections:
-        - admin_index: 0
-          bearings:
-          - 68
-          - 178
-          duration: 11.972
-          entry:
-          - true
-          - false
-          geometry_index: 8
-          in: 1
-          is_urban: true
-          location:
-          - -78.66517
-          - 35.785469
-          mapbox_streets_v8:
-            class: service
-          out: 0
-          weight: 11.972
-        - admin_index: 0
-          bearings:
-          - 44
-          - 219
-          entry:
-          - true
-          - false
-          geometry_index: 10
-          in: 1
-          is_urban: true
-          location:
-          - -78.665036
-          - 35.785556
-          mapbox_streets_v8:
-            class: service
-          out: 0
-          turn_duration: 1
-          turn_weight: 1
-        maneuver:
-          bearing_after: 68
-          bearing_before: 358
-          instruction: Turn right onto the walkway.
-          location:
-          - -78.66517
-          - 35.785469
-          modifier: right
-          type: turn
-        mode: walking
-        name: ''
-        weight: 15.789
-      - distance: 20
-        driving_side: right
-        duration: 14.085
-        geometry:
-          coordinates:
-          - - -78.665002
-            - 35.785585
-          - - -78.664852
-            - 35.785713
-          type: LineString
-        intersections:
-        - admin_index: 0
-          bearings:
-          - 44
-          - 224
-          entry:
-          - true
-          - false
-          geometry_index: 11
-          in: 1
-          is_urban: true
-          location:
-          - -78.665002
-          - 35.785585
-          mapbox_streets_v8:
-            class: service
-          out: 0
-        maneuver:
-          bearing_after: 44
-          bearing_before: 44
-          instruction: Keep right to take the walkway.
-          location:
-          - -78.665002
-          - 35.785585
-          modifier: slight right
-          type: fork
-        mode: walking
-        name: ''
-        weight: 14.085
+        weight: 54.99
       - distance: 0
         driving_side: right
         duration: 0
         geometry:
           coordinates:
-          - - -78.664852
-            - 35.785713
-          - - -78.664852
-            - 35.785713
+          - - -78.666458
+            - 35.785396
+          - - -78.666458
+            - 35.785396
           type: LineString
         intersections:
         - admin_index: 0
           bearings:
-          - 224
+          - 113
           entry:
           - true
-          geometry_index: 12
+          geometry_index: 10
           in: 0
           location:
-          - -78.664852
-          - 35.785713
+          - -78.666458
+          - 35.785396
         maneuver:
           bearing_after: 0
-          bearing_before: 44
-          instruction: You have arrived at your destination.
+          bearing_before: 293
+          instruction: Your destination is on the right.
           location:
-          - -78.664852
-          - 35.785713
+          - -78.666458
+          - 35.785396
+          modifier: right
           type: arrive
         mode: walking
         name: ''
         weight: 0
       summary: ''
-      weight: 94.025
-    weight: 94.025
+      weight: 54.99
+    weight: 54.99
     weight_name: pedestrian
   waypoints:
   - distance: 26.07
@@ -321,10 +183,10 @@ route:
     - -78.665652
     - 35.785169
     name: ''
-  - distance: 4.996
+  - distance: 23.259
     location:
-    - -78.664852
-    - 35.785713
+    - -78.666458
+    - 35.785396
     name: ''
 title: Leazar Hall
 
